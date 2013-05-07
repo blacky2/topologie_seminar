@@ -1,0 +1,34 @@
+\input{header}
+
+\begin{document}
+\pagenumbering{Roman}
+
+%Titelseite
+\include{titelseite}
+%Inhaltsverzeichnis
+\tableofcontents
+%Abbildungsverzeichnis
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+%Tabellenverzeichnis
+%\listoftabels
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\newpage
+
+\pagenumbering{arabic}
+
+% Die einzelnen Kapitel
+\include{1_einleitung}
+\include{2_grundlagen}
+\include{3_kompaktheit}
+\include{4_saetze_kompaktheit}
+% Anhang (Screenies etc.)
+\textcolor{white}{\cite{book:hardware:pc}\cite{internet:arstechnica}\cite{book:memory}}
+\include{x_anhang}
+
+\renewcommand{\bibname}{Quellenverzeichnis}
+\bibliographystyle{geralpha}
+\bibliography{document}
+
+\end{document}
+

@@ -1,0 +1,122 @@
+\documentclass[pagesize=pdftex,paper=a4,bibtotoc,12pt]{scrreprt}
+
+%%%%%%%%%%%%%%%%%DATEN%%%%%%%%%%%%%%%%%
+%Erstellungsdatum
+\date{\today}
+%Autor
+\author{Martin Kraus, Philipp Schwarz}
+\title{Seminar Topologie: Kompakte Räume}
+
+%%%%%%%%%%%%%%%%%pakete%%%%%%%%%%%%%%%%%
+%neue Rechtschreibung
+\usepackage{ngerman}
+ 
+%\usepackage[T1]{fontenc}
+%Umlaute ermölichen utf8 ( latin1)
+\usepackage[utf8]{inputenc}
+ 
+% Tabellen
+\usepackage{array}
+ 
+% Schriftfarben
+\usepackage{color}
+
+%Bilder
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsRule{*}{mps}{*}{}
+%Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%Nomenclature
+\usepackage[intoc]{nomencl}
+
+%Kopf-/Fußzeilen
+\usepackage{fancyhdr}
+
+%Hyperref für Bookmarks im PDF
+\usepackage[pdftex, pagebackref]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%seitencfg%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\nouppercase{\leftmark}}
+%Kopfzeile rechts bzw. außen
+\fancyhead[R]{\thepage}
+%Linie open
+\renewcommand{\headrulewidth}{0.5pt}
+%Fußzeile links bzw. innen
+\fancyfoot[L]{\copyright Seminar Topologie: Kompakte Räume - Martin Kraus, Philipp Schwarz}
+%Fußzeile rechts bzw. außen
+\fancyfoot[R]{\today}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+
+\usepackage[pdftex, pagebackref]{hyperref}
+\hypersetup {
+pdftitle = {Martin Kraus, Philipp Schwarz},
+pdfsubject = {Seminar Topologie: Kompakte Räume}, 
+pdfauthor = {Martin Kraus, Philipp Schwarz},
+pdfhighlight = {/O},
+pdfkeywords = {Kompakte Räume, Satz von Heine-Borel}, colorlinks = {false},
+bookmarksnumbered = {true},
+citebordercolor = {1 1 1},
+linkbordercolor = {1 1 1},
+urlbordercolor = {1 1 1},
+bookmarksopen = {true},
+bookmarksopenlevel = {1}
+}
+%%%%%%%%%%%%%%%%%%%EIGENE-BEFEHLE%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ncl}[2]{\nomenclature{\textit{#1}}{\textcolor{white}{test}\\#2}}
+\newcommand{\glossar}[1]{\textit{#1}\glossary{\textit{#1}}}
+
+%Bilder
+\newcommand{\pic}[1]{Abbildung \ref{#1}}
+\newcommand{\picp}[1]{Abbildung \ref{#1} Seite \pageref{#1}}
+%Tabellen
+\newcommand{\tab}[1]{Tabelle \ref{#1}}
+\newcommand{\tabp}[1]{Tabelle \ref{#1} Seite \pageref{#1}}
+%Darstellung eines Links im Quellenverzeichnis
+\newcommand{\urlg}[2]{\url{#1}\\zuletzt abgerufen am #2}
+%Verweise
+\newcommand{\see}[1]{(siehe Kapitel \ref{#1})}
+\newcommand{\seeo}[1]{siehe Kapitel \ref{#1}}
+\newcommand{\seea}[1]{(siehe Anhang \ref{#1})}
+% Fett und Schief
+\newcommand{\textbit}[1]{\textbf{\textit{#1}}}
+% theoremartige Konstrukte
+\newtheorem{Def}{Definition}
+\newcommand{\defH}[1]{\textbf{#1}}
+\newtheorem{Satz}{Satz}
+%%%%%%%%%%%%%%%%%%%%NOMENCLATURE/GLOSSAR%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%NOMENCLATURE/GLOSSAR%%%%%%%%%%%%%%%%%%%
+%Nomenclature 
+\makenomenclature
+
+%Glossar
+\include{glossar}
+
+%%chemie
+%\usepackage[version=3]{mhchem}
+
+%own commands
+%Merkbox:
+%\begin{merkbox}
+% text
+%nomenclature}
+% \newsavebox\TBox
+% \newenvironment{merkbox}
+%{%\par\noindent
+% \begin{lrbox}{\TBox}
+% \varwidth{\textwidth-2.5\fboxsep}
+% }{\endvarwidth\end{lrbox}%
+% \textcolor{orange}{\textbf{Merke:}}\\[1mm]
+% \Ovalbox{\usebox\TBox}\par
+%}
+
+%markierungen
+%\newcommand{\texthigh}[1]{\textcolor{orange}\textbf{#1}}
+%\newcommand{\texthead}[1]{\emph{#1:}\hline}
