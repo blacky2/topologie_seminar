@@ -1,6 +1,6 @@
 \chapter{Grundlegende Definitionen}
 
-\begin{Def}
+\begin{Def}[Topologischer Raum]
 	Sei \(X\) eine Menge und \( \mathcal{O} \) eine Menge von Teilmengen von \(X\). Das Paar \((X,\mathcal{O})\) heißt topologischer Raum, wenn folgende Bedingungen erfüllt sind:
 	\begin{enumerate}
 		\item Der granze Raum \(X\) und \(\emptyset\) sind offen.
@@ -8,7 +8,30 @@
 		\item \(\bigcap_{\lambda \in \Lambda} U_{\lambda} für \(\lambda \in \Lambda\) mit \(U_{\lambda} \in \mathcal{O} \)
 	\end{enumerate}
 \end{Def}
-\begin{
+
+Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
+\begin{Def}[Umgebung eines Punktes]
+	Eine Menge \(V \subset X\) heißt Umgebung eines Punktes \(p \in X\), wenn es eine offene Menge \(U\subset X\) gibt für die gilt: 
+	\(p \in U \subset V\).
+\end{Def}
+
+{\bf Bemerkung:} Mengen aus \(O \in \mathcal{O} \) heißen offen, und Mengen \(B\) heißen abgeschlossen, wenn ihr Komplement \( X \backslash A\) offen ist.
+
+\begin{Def}[Menge aller Umgebungen eines Punktes]
+	Sei \(x \in X\) ein Punkt, dann bezeichnet \(U(x) \) die Menge aller Umgebungen von \(x). 
+\end{Def}
+
+\begin{Def}[hausdorffsch]
+	Ein topologischer Raum \((X,\mathcal{O})\) heißt {\bf hausdorffsch}, falls \( \forall x,y \in X\) mit \(x\ne y\) gilt:
+	\[\exists U \in U(x) \land \exists V \in U(y) : U \cap V = \emptyset \]
+\end{Def}
+
+\begin{Def}[Offene Überdeckung]
+	Eine Familie \(U_{\lambda} | \lambda \in \Lambda) \) mit  \(U_{\lambda} \in \mathcal{O} \) für \( \lambda \in \Lambda \) heißt 	offene Überdeckung von X wenn gilt:
+	\[ \bigcup_{\lambda \in \Lambda } U_{\lambda} = X \]
+\end{Def}
+
+	
 
 
 
