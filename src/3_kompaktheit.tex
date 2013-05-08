@@ -1,1 +1,50 @@
 \chapter{Kompakte Räume}
+Im folgendenden Kapitel werden kompakte Räume definiert und motiviert. Weiterhin wird 
+wird eine Charakterisierung von Kompaktheit gegeben.
+Nun endlich zur Definition von Kompakten Räumen.
+
+\begin{Def}[Kompaktheit]
+	Ein hausdorffscher topologischer Raum \((X, \mathcal{O})\) heißt \defH{kompakt}, wenn es zu jeder offenen Überdeckung 
+	\((U_{\lambda} | \lambda \in \Lambda)\) von \(X\) eine endliche offene Teilüberdeckung gibt, also
+	\[ (U_{\lambda} | \lambda \in \Lambda) \mbox{ offene Überdeckung }
+     \Rightarrow \exists \Gamma \subset \Lambda : |\Gamma| < \infty \land \bigcup_{\gamma \in \Gamma} U_{\gamma} = X \] 
+	gilt.
+\end{Def}
+Man kann durch Übergang zu Komplementen folgende Charakterisierung hierzu finden:
+
+\begin{Satz}[Charakterisierung Kompaktheit]
+	Ein hausdorffscher topologischer Raum \((X, \mathcal{O})\) ist genau dann {\bf kompakt } wenn gilt:
+	\begin{align*}
+		(A_{\lambda}| \lambda \in \Lambda) \mbox{ Familie } & \mbox{abgeschlossener Mengen in } X \mbox{ mit } 
+		\bigcap_{\lambda \in \Lambda} A_{\lambda} = \emptyset \\
+		\Rightarrow \exists \Gamma \subset \Lambda : |\Gamma| < \infty & \land \bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset
+	\end{align*} 
+\end{Satz}
+
+Beweis:
+\\
+\(\Leftarrow\)
+\\
+Gelte nun für belibige Familien abgeschlossener Mengen \((A_{\lambda}| \lambda \in \Lambda)\) in  \(X\) mit
+\(\bigcap_{\lambda \in \Lambda} A_{\lambda} = \emptyset\), dass eine endliche Teilmenge \(\Gamma \subset \Lambda\) existiert mit
+\(\bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset\) und sei \( (U_{\omega} | \omega \in \Omega) \) offene Überdeckung
+von \(X\). So setze \(A_{\omega} = X \backslash U_{\omega} \; \forall \omega \in \Omega\), d.h. \(A_{\omega}\) ist abgeschlossen
+und es folgt 
+\[\bigcap_{\omega \in \Omega} A_{\omega} = \bigcap_{\omega \in \Omega} X \backslash U_{\omega} =  X \backslash 
+\bigcup_{\omega \in \Omega} U_{\omega} = X \backslash X =  \emptyset \]
+Nach Voraussetzung aber existiert ein \(\Gamma \subset \Omega\), sodass die obige Gleichung erfüllt bleibt. Demnach ist 
+\[ X = X \backslash \emptyset = X \backslash \bigcap_{\gamma \in \Gamma} A_{\gamma} = \bigcup_{\gamma \in \Gamma} X \backslash A_{\gamma} = 
+\bigcup_{\gamma \in \Gamma} U_{\gamma} \]
+ und es ist zur Überdeckung \( (U_{\omega} | \omega \in \Omega) \) eine endliche Teilüberdeckung gefunden.
+ \\
+ \(\Rightarrow\)
+ \\
+ Die Hinrichtung zeigt man analog, indem man Kompaktheit voraussetzt und für eine Familie abgeschlossener Teilmengen zu den 
+ offenen Komplementen übergeht.
+
+ Warum ist denn nun Kompaktheit eine solch angenehme Eigenschaft? Nun sie ist so zusagen, wie einleitend bereits erwähnt, 
+ ein Bindeglied zwischen dem endlichen und dem unendlichen - zwischen Säcken und Abgründen. Ein Kompakter Raum seinerseits 
+ kann durchaus unendlich, ja sogar überabzählbar unendlich viele Elemente enthalten. Überdecken kann man diese aber immer mit
+ einem endlichen System aus Teilmengen des Raumes. Somit sind auf Kompakten Räumen Induktionsschlüsse wie folgt möglich:
+ 
+
