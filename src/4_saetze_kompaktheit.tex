@@ -3,8 +3,7 @@ Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 	\begin{Satz}
 		Ist \(X\) kompakt und \(A \subset X \mbox{ abgeschlossen } \Rightarrow A\) kompakt.
 	\end{Satz}
-	
- 
+	%
 	\beweis{Beweis} 
 		\\
 		Sei \((F_{\lambda} | \lambda \in \Lambda) \) eine Familie abgeschlossener Teilmengen in \(A\) mit \( \bigcap_{\lambda \in \Lambda } F_{\lambda} = \emptyset \).\\
@@ -12,16 +11,15 @@ Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 		Da \(X\) kompakt ist, besitzt jede Familie \((B_{\omega} | \omega \in \Omega) \) mit abgeschlossenen 
 		\(B_{\omega} \in X \) mit der Eigenschaft \( \bigcap_{\omega \in \Omega} B_{\omega} = \emptyset\), eine 
 		endliche Indexmenge \(\Phi\) für die bereits gilt: \( \bigcap_{\omega \in \Phi} B_{\omega} = \emptyset\).\\
-		Also existiert auch eine endliche Indexmenge\( \Gamma \subset \Lambda \) mit \( \bigcap_{\lambda \in \Gamma } F_{\lambda} = \emptyset \), dadurch ist 
+		Also existiert auch eine endliche Indexmenge \( \Gamma \subset \Lambda \) mit \( \bigcap_{\lambda \in \Gamma } F_{\lambda} = \emptyset \), dadurch ist 
 		\(A\) auch kompakt.
-		\qed
+	\qed
 		
 		
 	\begin{Satz}
 		Ist \(X\) hausdorffsch und \(A \subset X \) kompakt \( \Rightarrow \) \(A\) ist abgeschlossen.
 	\end{Satz}
-	
-	
+	%
 	\beweis{Beweis}
 		\\
 		Laut Vorraussetzung ist \(X\) hausdorffsch, und sei \(p \notin A \). \\
@@ -30,22 +28,25 @@ Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 		 \(U_{a} \cap V_{a} = \emptyset \). Diese Mengen kann man finden da \(X\) hausdorffsch ist. Da \(A\) kompakt ist, existiert eine endliche Menge \(I \subset A\) für die gilt:
 		\( \bigcup_{a \in I} U_{a} = A \). \\
 		Nun definiert man \(\bigcap_{a \in I} V_{a} \subset X\backslash A \) dies ist eine offene Umgebung zu p. Da p beliebig gewählt war, gibt es 
-		für jeden Punkt in \(X\backslash A \) eine offene Umgebung, daher muss \(A\) abgeschlossen sein. \qed
+		für jeden Punkt in \(X\backslash A \) eine offene Umgebung, daher muss \(A\) abgeschlossen sein. 
+	\qed
 		
 	\begin{Lemma}[Tubenlemma]
 		Sei \(K \) ein kompakter topologischer Raum,  \(p \notin X \) und \( U \subset X \times K \) offen mit \( \{p\} \times K \subset U \). \\
 		Dann \( \exists \; V \subset X \), \( V \in \mathcal{O} \) mit \( V \times K \subset U \). \( V \times K \) nennt man { \bf Tubenumgebung } von 
 		\( \{p\} \times K \subset X \times K \).
 	\end{Lemma} 
-		
+	%
 	\beweis{Beweis}
 		\\
 		\( \forall k \in K \; \exists V_{k}, W_{k}\) offene Mengen mit \( p \in V_{k} \subset X, k \in W_{k} \subset K, (p,k) \in  V_{k} \times W_{k} \subset U\).
 		Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
-		Da \(K \) kompakt ist existiert eine endliche Teilmenge
-		\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \) dann gilt:
+		Da \(K \) kompakt ist, existiert eine endliche Teilmenge
+		\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \), dann gilt:
 		\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \]
-		\qed
+	\qed
+	
+	\includegraphics{tubenlemma.pdf} 
 	
 	\begin{Satz}
 		Ein endliches Produkt hausdorffscher Räume ist wieder hausdorffsch.
@@ -54,20 +55,54 @@ Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 		%
 	\beweis{Beweis}
 		\\
-		Wir wollen zunächst zeigen, dass das Produkt zweier hausdorffscher Räume wieder hausdorffsch ist. Dies reicht aus, da man jedes endliche Produkt 
-		auf ein Produkt zweier Räume zurück führen kann. \\
+		Wir wollen zunächst zeigen, dass das Produkt zweier hausdorffscher Räume wieder hausdorffsch ist. Dies reicht aus, da man jedes endliche Produkt topologischer Räume
+		durch Induktion auf ein Produkt zweier Räume zurückführen kann. \\
 		Seien \(X, Y\) zwei hausdorffsche topologische Räume.\\
 		Seien weiter \( (p,q), (x,y) \in X \times Y, (p,q) \ne (x,y) \). \\
-		Laut Vorraussetzungen ist \(X\) und \(Y\) jeweils hausdorfsch, also folgt \(x \ne p (1) \lor y \ne q (2)\).\\
-		Zu \((1) \) da \(x \ne p \) ist haben \(x, p \) Umgebungen \(U, V \) mit \( x \in U \subset X \land p \in V \subset X \) für die gilt: \( U \cap V = \emptyset \).\\ Daher gibt es die
-		zwei Umgebungen \( (U \times Y), (V \times Y) \) mit \( (U \times Y) \cap (V \times Y) = \emptyset \). \\
-		Setzt man in \((2) \) den gleichen Ansatz an, so folgt leicht, dass \( (X \times Y) \) hausdorffsch ist. Da wir gerade gezeigt haben, falls eine Komponente nicht gleich ist,
-		existieren fremde Umgebungen zu zwei nicht gleichen Punktepaaren\( (p,q), (x,y) \), was genau der Definition von hausdorffsch entspricht.
+		Laut Vorraussetzungen ist \(X\) und \(Y\) jeweils hausdorfsch, also folgt 
+		\[x \ne p \; (1) \lor y \ne q \; (2) \]
+		Zu (1) da \(x \ne p \) ist haben \(x, p \) Umgebungen \(A, B \) mit \( A \in U(x)  \land B \in U(p) \) für die gilt: \(A \cap B = \emptyset \).\\ Daher gibt es die
+		zwei Umgebungen \( (A \times Y), (B \times Y) \) mit \( (A \times Y) \cap (B \times Y) = \emptyset \). \\
+		Setzt man in (2) den gleichen Ansatz an, so folgt leicht, dass \( (X \times Y) \) hausdorffsch ist. Da wir gerade gezeigt haben, falls mindestens eine Komponente
+		nicht gleich ist,	existieren fremde Umgebungen zu zwei nicht gleichen Punktepaaren\( (p,q), (x,y) \), was genau der Definition von hausdorffsch entspricht.
+	\qed
+	\\
+	\begin{Satz}
+		Ein endliches Produkt kompakter Räume ist wieder kompakt.
+		
+	\end{Satz}
+	%
+	\beweis{Beweis}
+	\\
+	Wir zeigen wieder zunächst, dass das Produkt zweier kompakter Räume wieder kompakt ist. Da man hier ebenfalls keicht mit Induktion jedes endliche Produkt kompakter Räume 
+	auf ein Produkt zweier kompakter Räume zurückführen kann. \\
+	Nun seien \(X, Y\) zwei kompakte Räume.\\
+	Ist \((U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung in \(X \times Y \). Jede Faser \( \{p\} \times Y, p \in X \) wird von endlich vielen \((U_{\lambda} \) überdeckt,
+	da Y kompakt ist. Also gibt es eine Teilmenge \( I \subset \Lambda \) mit \( \{p\} \times Y \subset \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \). 
+	Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \) 
+	wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
+	\qed
 	
-		\qed
-		
+	{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
 	
-		
-		
-		
-		
+	Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
+	
+	\begin{Satz}[Heine-Borel]
+		Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
+	\end{Satz}
+	%
+	\beweis{Beweis}
+		Zu \(\Leftarrow \) \\
+		Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \) , liegt in einem abgeschlossenen n-dimensionalen Würfel\( Q \subset \mathbb{R}^n \). Dies folgt sofort aus der 
+		Beschränktheit der Menge \(A\). Da dieser Würfel \( Q \) ein Produkt aus abgeschlossenen und beschränkten Intervallen ist, ist er selbst kompakt.
+		\\
+		Zu \(\Rightarrow \) \\
+		Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
+	\qed \\
+	
+	{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
+	Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist. \\
+	
+	Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
+	relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.  Nun wollen wir noch zwei Sätzen zeigen, mit deren Hilfe man die Kompaktheit sehr gut anwenden kann.
+	
