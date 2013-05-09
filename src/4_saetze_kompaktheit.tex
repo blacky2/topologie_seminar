@@ -1,1 +1,73 @@
 \chapter{Sätze über kompakte Räume}
+Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
+	\begin{Satz}
+		Ist \(X\) kompakt und \(A \subset X\) abgeschlossen \Rightarrow \(A\) kompakt.
+	\end{Satz}
+	
+ 
+	\beweis{Beweis} 
+		\\
+		Sei \((F_{\lambda} | \lambda \in \Lambda) \) eine Familie abgeschlossener Teilmengen in \(A\) mit \( \bigcap_{\lambda \in \Lambda } F_{\lambda} = \emptyset \).\\
+		Dann ist automatisch auch jedes \(F_{\lambda} \) abgeschlossen in \(X\).\\
+		Da \(X\) kompakt ist, besitzt jede Familie \((B_{\omega} | \omega \in \Omega) \) mit abgeschlossenen 
+		\(B_{\omega} \in X \) mit der Eigenschaft \( \bigcap_{\omega \in \Omega} B_{\omega} = \emptyset\), eine 
+		endliche Indexmenge \(\Phi\) für die bereits gilt: \( \bigcap_{\omega \in \Phi} B_{\omega} = \emptyset\).\\
+		Also existiert auch eine endliche Indexmenge\( \Gamma \subset \Lambda \) mit \( \bigcap_{\lambda \in \Gamma } F_{\lambda} = \emptyset \), dadurch ist 
+		\(A\) auch kompakt.
+		\qed
+		
+		
+	\begin{Satz}
+		Ist \(X\) hausdorffsch und \(A \subset X \) kompakt \( \Rightarrow \) \(A\) ist abgeschlossen.
+	\end{Satz}
+	
+	
+	\beweis{Beweis}
+		\\
+		Laut Vorraussetzung ist \(X\) hausdorffsch, und sei \(p \notin A \). \\
+		Wir wollen zeigen, dass es für jeden Punkt in \(X \backslash A \) eine offene Umgebung in \(X \backslash A \) gibt.\\
+		\( \forall a \in A\) : \(\exists U_{a}\subset \mathcal{O} \) mit \(  a \in U_{a}\) und \(\exists V_{a}\subset \mathcal{O} \), \(  p \in V_{a}\) für die gelten soll:
+		 \(U_{a} \cap V_{a} = \emptyset \). Diese Mengen kann man finden da \(X\) hausdorffsch ist. Da \(A\) kompakt ist, existiert eine endliche Menge \(I \subset A\) für die gilt:
+		\( \bigcup_{a \in I} U_{a} = A \). \\
+		Nun definiert man \(\bigcap_{a \in I} V_{a} \subset X\backslash A \) dies ist eine offene Umgebung zu p. Da p beliebig gewählt war, gibt es 
+		für jeden Punkt in \(X\backslash A \) eine offene Umgebung, daher muss \(A\) abgeschlossen sein. \qed
+		
+	\begin{Lemma}[Tubenlemma]
+		Sei \(K \) ein kompakter topologischer Raum,  \(p \notin X \) und \( U \subset X \times K \) offen mit \( \{p\} \times K \subset U \). \\
+		Dann \( \exists \; V \subset X \), \( V \in \mathcal{O} \) mit \( V \times K \subset U \). \( V \times K \) nennt man { \bf Tubenumgebung } von 
+		\( \{p\} \times K \subset X \times K \).
+	\end{Lemma} 
+		
+	\beweis{Beweis}
+		\\
+		\( \forall k \in K \; \exists V_{k}, W_{k}\) offene Mengen mit \( p \in V_{k} \subset X, k \in W_{k} \subset K, (p,k) \in  V_{k} \times W_{k} \subset U\).
+		Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
+		Da \(K \) kompakt ist existiert eine endliche Teilmenge
+		\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \) dann gilt:
+		\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \)
+		\qed
+	
+	\begin{Satz}
+		Ein endliches Produkt hausdorffscher Räume ist wieder hausdorffsch.
+		
+	\end{Satz}
+	
+	\beweis{Beweis}
+		\\
+		Wir wollen zunächst zeigen, dass das Produkt zweier hausdorffscher Räume wieder hausdorffsch ist. Dies reicht aus, da man jedes endliche Produkt 
+		auf ein Produkt zweier Räume zurück führen kann. \\
+		Seien \(X, Y\) zwei hausdorffsche topologische Räume.\\
+		Seien weiter \( (p,q), (x,y) \in X \times Y, (p,q) \ne (x,y). \\
+		Laut Vorraussetzungen ist \(X\) und \(Y\) jeweils hausdorfsch, also folgt \(x \ne p (1) \lor y \ne q (2)\).\\
+		Zu \((1) \) da \(x \ne p \) ist haben \(x, p \) Umgebungen \(U, V \) mit \( x \in U \subset X \land p \in V \subset X \) für die gilt: \( U \cap V = \emptyset \).\\ Daher gibt es die
+		zwei Umgebungen \( (U \times Y), (V \times Y) \) mit \( (U \times Y) \cap (V \times Y) = \emptyset \). \\
+		Setzt man in \((2) \) den gleichen Ansatz an, so folgt leicht, dass \( (X \times Y) \) hausdorffsch ist. Da wir gerade gezeigt haben, falls eine Komponente nicht gleich ist,
+		existieren fremde Umgebungen zu zwei nicht gleichen Punktepaaren\( (p,q), (x,y) \), was genau der Definition von hausdorffsch entspricht.
+	
+		\qed
+		
+	
+		
+		
+		
+		
