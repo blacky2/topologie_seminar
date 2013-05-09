@@ -1,7 +1,7 @@
 \chapter{Sätze über kompakte Räume}
 Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 	\begin{Satz}
-		Ist \(X\) kompakt und \(A \subset X\) abgeschlossen \Rightarrow \(A\) kompakt.
+		Ist \(X\) kompakt und \(A \subset X \mbox{ abgeschlossen } \Rightarrow A\) kompakt.
 	\end{Satz}
 	
  
@@ -44,20 +44,20 @@ Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 		Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
 		Da \(K \) kompakt ist existiert eine endliche Teilmenge
 		\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \) dann gilt:
-		\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \)
+		\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \]
 		\qed
 	
 	\begin{Satz}
 		Ein endliches Produkt hausdorffscher Räume ist wieder hausdorffsch.
 		
 	\end{Satz}
-	
+		%
 	\beweis{Beweis}
 		\\
 		Wir wollen zunächst zeigen, dass das Produkt zweier hausdorffscher Räume wieder hausdorffsch ist. Dies reicht aus, da man jedes endliche Produkt 
 		auf ein Produkt zweier Räume zurück führen kann. \\
 		Seien \(X, Y\) zwei hausdorffsche topologische Räume.\\
-		Seien weiter \( (p,q), (x,y) \in X \times Y, (p,q) \ne (x,y). \\
+		Seien weiter \( (p,q), (x,y) \in X \times Y, (p,q) \ne (x,y) \). \\
 		Laut Vorraussetzungen ist \(X\) und \(Y\) jeweils hausdorfsch, also folgt \(x \ne p (1) \lor y \ne q (2)\).\\
 		Zu \((1) \) da \(x \ne p \) ist haben \(x, p \) Umgebungen \(U, V \) mit \( x \in U \subset X \land p \in V \subset X \) für die gilt: \( U \cap V = \emptyset \).\\ Daher gibt es die
 		zwei Umgebungen \( (U \times Y), (V \times Y) \) mit \( (U \times Y) \cap (V \times Y) = \emptyset \). \\
