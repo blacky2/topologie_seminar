@@ -1,5 +1,10 @@
 \chapter{Sätze über kompakte Räume}
-
+%
+Hier eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zutaten für unser Endprodukt, den \glqq Satz von Heine-Borel\grqq, brauchen. \\
+%
+\\
+\includegraphics[width=16cm]{heineborel_skizze0.pdf}
+%
 \begin{Satz}
 Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
 Dann ist auch das Bild \( f(X) \) kompakt.
@@ -66,7 +71,7 @@ Dann ist auch das Bild \( f(X) \) kompakt.
 	Dann ist automatisch auch jedes \(F_{\lambda} \) abgeschlossen in \(X\).\\
 	Da \(X\) kompakt ist, besitzt jede Familie \((B_{\omega} | \omega \in \Omega) \) mit abgeschlossenen 
 	\(B_{\omega} \in X \) mit der Eigenschaft \( \bigcap_{\omega \in \Omega} B_{\omega} = \emptyset\), eine 
-	endliche Indexmenge \(\Phi\) für die bereits gilt: \( \bigcap_{\omega \in \Phi} B_{\omega} = \emptyset\).\\
+	endliche Indexmenge \(\Phi \) für die bereits gilt: \( \bigcap_{\omega \in \Phi} B_{\omega} = \emptyset\).\\
 	Also existiert auch eine endliche Indexmenge \( \Gamma \subset \Lambda \) mit \( \bigcap_{\lambda \in \Gamma } F_{\lambda} = \emptyset \), dadurch ist 
 	\(A\) auch kompakt.
 \qed
@@ -99,11 +104,10 @@ Dann ist auch das Bild \( f(X) \) kompakt.
 	Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
 	Da \(K \) kompakt ist, existiert eine endliche Teilmenge
 	\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \), dann gilt:
-	\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \]
-\qed
-	
-\includegraphics{tubenlemma.pdf} 
-	
+	\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \] \qed	\\
+%
+\input{tubenlemma.pdf_tex}
+%
 \begin{Satz}
 	Ein endliches Produkt hausdorffscher Räume ist wieder hausdorffsch.
 \end{Satz}
@@ -135,28 +139,46 @@ Dann ist auch das Bild \( f(X) \) kompakt.
 	da Y kompakt ist. Also gibt es eine Teilmenge \( I \subset \Lambda \) mit \( \{p\} \times Y \subset \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \). 
 	Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \) 
 	wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
-\qed
-
-{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
-	
-Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
-	
-\begin{Satz}[Heine-Borel]
-	Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
-\end{Satz}
-%
-\beweis{Beweis}
-	Zu \(\Leftarrow \) \\
-	Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \) , liegt in einem abgeschlossenen n-dimensionalen Würfel\( Q \subset \mathbb{R}^n \). Dies folgt sofort aus der 
-	Beschränktheit der Menge \(A\). Da dieser Würfel \( Q \) ein Produkt aus abgeschlossenen und beschränkten Intervallen ist, ist er selbst kompakt.
+	\qed\\
 	\\
-	Zu \(\Rightarrow \) \\
-	Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
-\qed \\
+	{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
+	%
+	\\
+	Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
+	%	
+	\begin{Satz}[Heine-Borel]
+		Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
+	\end{Satz}
+	%
+	\beweis{Beweis} \\
+		Zu \(\Leftarrow \): \\
+		Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \) , liegt in einem abgeschlossenen n-dimensionalen Würfel\( Q \subset \mathbb{R}^n \). Dies folgt sofort aus der 
+		Beschränktheit der Menge \(A\). Da dieser Würfel \( Q \) ein Produkt aus abgeschlossenen und beschränkten Intervallen ist, ist er selbst kompakt.
+		\\
+		Zu \(\Rightarrow \): \\
+		Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
+	\qed \\
+	%
+	\\
+	{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
+	Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist.\\
+	%
+	Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
+	relativ leicht entscheiden kann ob eine Teilmenge kompakt ist. 
+	%
+	\begin{Satz}[Satz von Bolzano-Weierstraß]
+		Jede Folge in einem kompakten metrischen Raum \(K\) besitzt einen konvergente Teilfolge.
+	\end{Satz}
+	%
+	\beweis{Beweis}\\
+		Wir betrachten für beliebige \( p \in K \), die \( \frac{1}{n} \)- Umgebungen \( U_{\frac{1}{n},p} \subset K \) von \(p \). \\
+		Wir nehmen nun an die Folge besitzt keine konvergente Teilfolge, also in jeder Umgebung  \( U_{\frac{1}{n},p} \) findet man nur endlich viele Folgenglieder. 
+		Da K kompakt ist, überdecken endlich viele  \( U_{\frac{1}{n},p} \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
+		Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgenglieder im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
+		Raum eine konvergente Teilfolge.
+	\qed\\
+	%
+	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage: Dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
+		
 	
-{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
-Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist. \\
 
-Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
-relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.  Nun wollen wir noch zwei Sätzen zeigen, mit deren Hilfe man die Kompaktheit sehr gut anwenden kann.
-	
