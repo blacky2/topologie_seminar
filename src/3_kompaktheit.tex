@@ -41,10 +41,29 @@ Die Hinrichtung zeigt man analog, indem man Kompaktheit voraussetzt und für ein
 offenen Komplementen übergeht.
 
 \section{Motivation}
-Warum ist denn nun Kompaktheit eine solch angenehme Eigenschaft? Nun sie ist so zusagen, wie einleitend bereits erwähnt, 
-ein Bindeglied zwischen dem endlichen und dem unendlichen - zwischen Säcken und Abgründen. Ein Kompakter Raum seinerseits 
+Warum ist denn Kompaktheit überhaupt eine beachtenswerte Eigenschaft? Nun sie ist so zusagen ein Bindeglied zwischen dem 
+Endlichen und dem Unendlichen - zwischen Säcken und Abgründen. Ein Kompakter Raum seinerseits 
 kann durchaus unendlich, ja sogar überabzählbar unendlich viele Elemente enthalten. Überdecken kann man diese aber immer mit
-einem endlichen System aus offenen Teilmengen des Raumes. Somit sind auf Kompakten Räumen Induktionsschlüsse wie folgt möglich:
+einem endlichen System aus offenen Teilmengen des Raumes. Somit ist auf Kompakten Räumen folgende Schlussweise möglich:
+\\
+\begin{Satz}
+Sei \(O \in \mathcal{O}\) und \( \Psi(O) : \mbox{\glqq} O \mbox{ hat die Eigenschaft } \psi \mbox{\grqq} \) eine Aussage, 
+daher die Eigenschaft \(\psi\) trifft entweder auf \(O\) zu oder eben nicht.
+Gilt nun weiter
+\begin{align}
+	U, V \in \mathcal{O} : \Psi(U) \land \Psi(V) &\Rightarrow \Psi(U \cup V) \label{eq:motivation:1}\\
+	\forall x \in X \; \exists U_x \in \mathcal{O} &: \Psi(U_x) \label{eq:motivation:2}
+\end{align}
+Dann ist auch \(\Psi(X)\) wahr.
+\end{Satz}
+
+Es bildet \( (U_x | x \in X) \) wegen \eqref{eq:motivation:2} eine offene Überdeckung von \(X\). Aus der Kompaktheit von \(X\) folgt nun 
+die Existenz einer endlichen Teilüberdeckung, also \(X =  \bigcup_{i=1}^{n} U_{x_i}\) mit geeignetem \( n \in \mathbb{N} \). 
+Durch Vollständige Induktion zeigt man durch Anwenden von \eqref{eq:motivation:1}, dass \(\Psi(X)\) wahr ist, d.h. die 
+Eigenscahft \(\psi\) auf \(X\) gilt.
+
+dass \( \Psi(X) = \Psi(U_{x_1} \cup \dots \cup U_{x_n})\) erfüllt ist. Man beachte das hier Vollständige Induktion
+nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert.
 
 \section{Beispiel}
 Man betrachte die Menge \( (0,1) \subset \mathbb{R} \). Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
