@@ -123,12 +123,12 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	da Y kompakt ist. Also gibt es eine Teilmenge \( I \subset \Lambda \) mit \( \{p\} \times Y \subset \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \). 
 	Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \) 
 	wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
-<<<<<<< HEAD
-	\qed
+	\qed\\
 	\\
 	{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
 	%
-	Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.\\
+	\\
+	Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
 	%	
 	\begin{Satz}[Heine-Borel]
 		Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
@@ -143,36 +143,26 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 		Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
 	\qed \\
 	%
+	\\
 	{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
 	Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist.\\
 	%
 	Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
-	relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.  Nun wollen wir noch zwei Sätzen zeigen, mit deren Hilfe man die Kompaktheit sehr gut anwenden kann.
+	relativ leicht entscheiden kann ob eine Teilmenge kompakt ist. 
+	%
+	\begin{Satz}[Satz von Bolzano-Weierstraß]
+		Jede Folge in einem kompakten metrischen Raum \(K\) besitzt einen konvergente Teilfolge.
+	\end{Satz}
+	%
+	\beweis{Beweis}\\
+		Wir betrachten \( \forall p \in K \), die \( \frac{1}{n} \)- Umgebungen \( U_{\frac{1}{n},p} \subset K \) von \(p \). \\
+		Wir nehmen nun an die Folge besitzt keine konvergente Teilfolge, also in jeder Umgebung  \( U_{\frac{1}{n},p} \) findet man nur endlich viele Folgenglieder. 
+		Da K kompakt ist, überdecken endlich viele  \( U_{\frac{1}{n},p} \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
+		Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgenglieder im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
+		Raum eine konvergente Teilfolge.
+	\qed\\
+	%
+	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage: Dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
+		
 	
-=======
-\qed
 
-{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
-	
-Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
-	
-\begin{Satz}[Heine-Borel]
-	Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
-\end{Satz}
-%
-\beweis{Beweis}
-	Zu \(\Leftarrow \) \\
-	Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \) , liegt in einem abgeschlossenen n-dimensionalen Würfel\( Q \subset \mathbb{R}^n \). Dies folgt sofort aus der 
-	Beschränktheit der Menge \(A\). Da dieser Würfel \( Q \) ein Produkt aus abgeschlossenen und beschränkten Intervallen ist, ist er selbst kompakt.
-	\\
-	Zu \(\Rightarrow \) \\
-	Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
-\qed \\
-	
-{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
-Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist. \\
-
-Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
-relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.  Nun wollen wir noch zwei Sätzen zeigen, mit deren Hilfe man die Kompaktheit sehr gut anwenden kann.
-	
->>>>>>> origin
