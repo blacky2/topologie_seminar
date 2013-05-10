@@ -4,27 +4,29 @@
 Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
 Dann ist auch das Bild \( f(X) \) kompakt.
 \end{Satz}
+%
 \textbf{Beweis:}
-\\
-Sei \( (U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung von \(f(X)\). Es ist zu zeigen,
-dass eine endliche Teilüberdeckung existiert. 
-\[ f(X) = \bigcup_{\lambda \in \Lambda} U_{\lambda} \Rightarrow X = 
-   f^{-1}(\bigcup_{\lambda \in \Lambda} U_{\lambda}) = 
-	 \bigcup_{\lambda \in \Lambda} f^{-1}(U_{\lambda}) \]
-Da \(f\) stetig ist, sind die Urbilder \( f^{-1}(U_{\lambda}) \) der offenen Mengen \(U_{\lambda}\) wieder offen für 
-alle \(\lambda \in \Lambda\). Somit ist \( ( f^{-1}(U_{\lambda}) | \lambda \in \Lambda ) \) eine offene Überdeckung
-von \(X\). Zu dieser gibt es aufgrund der Kompaktheit von \(X\) ein endliches \( \Gamma \subset \Lambda \), mit 
-der Eigenschaft \( X = \bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma}) \). Hieraus folgt:
-\[ f(X) = f(\bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma})) = 
-   \bigcup_{\gamma \in \Gamma} f(f^{-1}(U_{\gamma})) = 
-   \bigcup_{\gamma \in \Gamma} U_{\gamma} \]
+	\\
+	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung von \(f(X)\). Es ist zu zeigen,
+	dass eine endliche Teilüberdeckung existiert. 
+	\[ f(X) = \bigcup_{\lambda \in \Lambda} U_{\lambda} \Rightarrow X = 
+  	 f^{-1}(\bigcup_{\lambda \in \Lambda} U_{\lambda}) = 
+		 \bigcup_{\lambda \in \Lambda} f^{-1}(U_{\lambda}) \]
+	Da \(f\) stetig ist, sind die Urbilder \( f^{-1}(U_{\lambda}) \) der offenen Mengen \(U_{\lambda}\) wieder offen für 
+	alle \(\lambda \in \Lambda\). Somit ist \( ( f^{-1}(U_{\lambda}) | \lambda \in \Lambda ) \) eine offene Überdeckung
+	von \(X\). Zu dieser gibt es aufgrund der Kompaktheit von \(X\) ein endliches \( \Gamma \subset \Lambda \), mit 
+	der Eigenschaft \( X = \bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma}) \). Hieraus folgt:
+	\[ f(X) = f(\bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma})) = 
+  	 \bigcup_{\gamma \in \Gamma} f(f^{-1}(U_{\gamma})) = 
+	   \bigcup_{\gamma \in \Gamma} U_{\gamma} \]
+\qed
 
 \begin{Satz}
 	Ein kompakter Teilraum \(K\) eines metrischen Raumes \( (X, d) \) ist beschränkt, daher es gilt:
 	\[ \exists p \in K, n \in \mathbb{N} : K \subset B_n(p) := \{ x \in X | d(x,p) < n \} \]
 \end{Satz}
 %TODO Teilraum. .. 
-\textbf{Beweis:}
+\beweis{Beweis} 
 Das System \( (B_{n}(p) | n \in \mathbb{N}) \) der offenen Kugeln vom Radius \(n \in \mathbb{N}\) überdeckt 
 den gesamten metrischen Raum \(X\), da man für jedes \(x \in X\) ein \(n \in \mathbb{N}\) findet mit \(d(p,x) < n\)
 also mit \(x \in B_{n}(p)\).
@@ -33,12 +35,14 @@ Also wird insbesondere auch \(K\) überdeckt.
 Da \(K\) kompakt ist gibt es ein \(m \in \mathbb{N} : K \subset \bigcup_{i=1}^{m} B_{i}(p) \). Hier ist
 mit eingegangen, dass jede endliche Teilmenge von \(\mathbb{N}\) ein Maximum besitzt.
 Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es folgt \(K \subset B_m(p)\).
+\qed
 
 \begin{Satz}
 	Sei \(I = [ a , b ] \subset \mathbb{R}\) ein Intervall mit \(a<b\) und \(a,b \in \mathbb{R}\). Dann 
 	ist \(I\) kompakt.
 \end{Satz}
-\textbf{Beweis:}
+\beweis{Beweis} 
+\qed
 
 \begin{Satz}
 		Ist \(X\) kompakt und \(A \subset X \mbox{ abgeschlossen } \Rightarrow A\) kompakt.

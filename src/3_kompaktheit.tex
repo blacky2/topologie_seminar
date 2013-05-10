@@ -18,29 +18,29 @@ Man kann durch Übergang zu Komplementen folgende Charakterisierung finden:
 		\Rightarrow \exists \Gamma \subset \Lambda : |\Gamma| < \infty & \land \bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset
 	\end{align*} 
 \end{Satz}
-Beweis:
-\\
-\glqq\(\Leftarrow\)\grqq
-\\
-Gelte nun für belibige Familien abgeschlossener Mengen \((A_{\lambda}| \lambda \in \Lambda)\) mit der Eigenschaft
-\(\bigcap_{\lambda \in \Lambda} A_{\lambda} = \emptyset\), dass eine endliche Teilmenge \(\Gamma \subset \Lambda\) existiert mit
-\(\bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset\) und sei \( (U_{\omega} | \omega \in \Omega) \) offene Überdeckung
-von \(X\). So setze \(A_{\omega} = X \backslash U_{\omega} \; \forall \omega \in \Omega\), d.h. \(A_{\omega}\) ist abgeschlossen
-und es folgt 
-\[\bigcap_{\omega \in \Omega} A_{\omega} = \bigcap_{\omega \in \Omega} X \backslash U_{\omega} =  X \backslash 
-\bigcup_{\omega \in \Omega} U_{\omega} = X \backslash X =  \emptyset \]
-Nach Voraussetzung aber existiert ein endliches \(\Gamma \subset \Omega\), sodass die obige Gleichung erfüllt bleibt. Demnach ist 
-\[ X = X \backslash \emptyset = X \backslash \bigcap_{\gamma \in \Gamma} A_{\gamma} = \bigcup_{\gamma \in \Gamma} X \backslash A_{\gamma} = 
-\bigcup_{\gamma \in \Gamma} U_{\gamma} \] 
-und es ist zur Überdeckung \( (U_{\omega} | \omega \in \Omega) \) eine endliche Teilüberdeckung gefunden.
-\\
-\glqq\(\Rightarrow\)\grqq
-\\
-Die Hinrichtung zeigt man analog, indem man Kompaktheit voraussetzt und für eine Familie abgeschlossener Teilmengen zu den 
-offenen Komplementen übergeht.
+\beweis{Beweis}
+	\\
+	\glqq\(\Leftarrow\)\grqq
+	\\
+	Gelte nun für belibige Familien abgeschlossener Mengen \((A_{\lambda}| \lambda \in \Lambda)\) mit der Eigenschaft
+	\(\bigcap_{\lambda \in \Lambda} A_{\lambda} = \emptyset\), dass eine endliche Teilmenge \(\Gamma \subset \Lambda\) existiert mit
+	\(\bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset\) und sei \( (U_{\omega} | \omega \in \Omega) \) offene Überdeckung
+	von \(X\). So setze \(A_{\omega} = X \backslash U_{\omega} \; \forall \omega \in \Omega\), d.h. \(A_{\omega}\) ist abgeschlossen
+	und es folgt 
+	\[\bigcap_{\omega \in \Omega} A_{\omega} = \bigcap_{\omega \in \Omega} X \backslash U_{\omega} =  X \backslash 
+	\bigcup_{\omega \in \Omega} U_{\omega} = X \backslash X =  \emptyset \]
+	Nach Voraussetzung aber existiert ein endliches \(\Gamma \subset \Omega\), sodass die obige Gleichung erfüllt bleibt. Demnach ist 
+	\[ X = X \backslash \emptyset = X \backslash \bigcap_{\gamma \in \Gamma} A_{\gamma} = \bigcup_{\gamma \in \Gamma} X \backslash A_{\gamma} = 
+	\bigcup_{\gamma \in \Gamma} U_{\gamma} \] 
+	und es ist zur Überdeckung \( (U_{\omega} | \omega \in \Omega) \) eine endliche Teilüberdeckung gefunden.
+	\\
+	\glqq\(\Rightarrow\)\grqq
+	\\
+	Die Hinrichtung zeigt man analog, indem man Kompaktheit voraussetzt und für eine Familie abgeschlossener Teilmengen zu den 
+	offenen Komplementen übergeht.
+\qed
 
 \section{Motivation}
-<<<<<<< HEAD
 Warum ist denn Kompaktheit überhaupt eine beachtenswerte Eigenschaft? Nun sie ist so zusagen ein Bindeglied zwischen dem 
 Endlichen und dem Unendlichen - zwischen Säcken und Abgründen. Ein Kompakter Raum seinerseits 
 kann durchaus unendlich, ja sogar überabzählbar unendlich viele Elemente enthalten. Überdecken kann man diese aber immer mit
@@ -56,14 +56,15 @@ Gilt nun weiter
 \end{align}
 Dann ist auch \(\Psi(X)\) wahr.
 \end{Satz}
-
-Es bildet \( (U_x | x \in X) \) wegen \eqref{eq:motivation:2} eine offene Überdeckung von \(X\). Aus der Kompaktheit von \(X\) folgt nun 
-die Existenz einer endlichen Teilüberdeckung, also \(X =  \bigcup_{i=1}^{n} U_{x_i}\) mit geeignetem \( n \in \mathbb{N} \). 
-Durch Vollständige Induktion zeigt man durch Anwenden von \eqref{eq:motivation:1}, dass \(\Psi(X)\) wahr ist, d.h. die 
-Eigenscahft \(\psi\) auf \(X\) gilt.
-
-dass \( \Psi(X) = \Psi(U_{x_1} \cup \dots \cup U_{x_n})\) erfüllt ist. Man beachte das hier Vollständige Induktion
-nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert.
+%
+\beweis{Beweis}
+	Es bildet \( (U_x | x \in X) \) wegen \eqref{eq:motivation:2} eine offene Überdeckung von \(X\). Aus der Kompaktheit von \(X\) folgt nun 
+	die Existenz einer endlichen Teilüberdeckung, also \(X =  \bigcup_{i=1}^{n} U_{x_i}\) mit geeignetem \( n \in \mathbb{N} \). 
+	Durch Vollständige Induktion zeigt man durch Anwenden von \eqref{eq:motivation:1}, dass \(\Psi(X)\) wahr ist, d.h. die 
+	Eigenscahft \(\psi\) auf \(X\) gilt.
+	dass \( \Psi(X) = \Psi(U_{x_1} \cup \dots \cup U_{x_n})\) erfüllt ist. Man beachte das hier Vollständige Induktion
+	nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert.
+\qed
 
 \section{Beispiel}
 Man betrachte die Menge \( (0,1) \subset \mathbb{R} \). Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
