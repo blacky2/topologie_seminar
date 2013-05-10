@@ -1,5 +1,10 @@
 \chapter{Sätze über kompakte Räume}
-
+%
+Hier eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zutaten für unser Endprodukt, den \glqq Satz von Heine-Borel\grqq, brauchen. \\
+%
+\\
+\includegraphics[width=16cm]{heineborel_skizze0.pdf}
+%
 \begin{Satz}
 Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
 Dann ist auch das Bild \( f(X) \) kompakt.
@@ -54,7 +59,7 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	Dann ist automatisch auch jedes \(F_{\lambda} \) abgeschlossen in \(X\).\\
 	Da \(X\) kompakt ist, besitzt jede Familie \((B_{\omega} | \omega \in \Omega) \) mit abgeschlossenen 
 	\(B_{\omega} \in X \) mit der Eigenschaft \( \bigcap_{\omega \in \Omega} B_{\omega} = \emptyset\), eine 
-	endliche Indexmenge \(\Phi\) für die bereits gilt: \( \bigcap_{\omega \in \Phi} B_{\omega} = \emptyset\).\\
+	endliche Indexmenge \(\Phi \) für die bereits gilt: \( \bigcap_{\omega \in \Phi} B_{\omega} = \emptyset\).\\
 	Also existiert auch eine endliche Indexmenge \( \Gamma \subset \Lambda \) mit \( \bigcap_{\lambda \in \Gamma } F_{\lambda} = \emptyset \), dadurch ist 
 	\(A\) auch kompakt.
 \qed
@@ -87,11 +92,10 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
 	Da \(K \) kompakt ist, existiert eine endliche Teilmenge
 	\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \), dann gilt:
-	\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \]
-\qed
-	
-\includegraphics{tubenlemma.pdf} 
-	
+	\[ V \times W \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \] \qed	\\
+%
+\input{tubenlemma.pdf_tex}
+%
 \begin{Satz}
 	Ein endliches Produkt hausdorffscher Räume ist wieder hausdorffsch.
 \end{Satz}
@@ -155,7 +159,7 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	\end{Satz}
 	%
 	\beweis{Beweis}\\
-		Wir betrachten \( \forall p \in K \), die \( \frac{1}{n} \)- Umgebungen \( U_{\frac{1}{n},p} \subset K \) von \(p \). \\
+		Wir betrachten für beliebige \( p \in K \), die \( \frac{1}{n} \)- Umgebungen \( U_{\frac{1}{n},p} \subset K \) von \(p \). \\
 		Wir nehmen nun an die Folge besitzt keine konvergente Teilfolge, also in jeder Umgebung  \( U_{\frac{1}{n},p} \) findet man nur endlich viele Folgenglieder. 
 		Da K kompakt ist, überdecken endlich viele  \( U_{\frac{1}{n},p} \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
 		Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgenglieder im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
