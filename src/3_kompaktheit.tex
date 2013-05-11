@@ -41,20 +41,21 @@ Man kann durch Übergang zu Komplementen folgende Charakterisierung finden:
 \qed
 
 \section{Motivation}
-Warum ist denn Kompaktheit überhaupt eine beachtenswerte Eigenschaft? Nun sie ist so zusagen ein Bindeglied zwischen dem 
+Warum ist denn Kompaktheit überhaupt eine beachtenswerte Eigenschaft? Nun sie ist sozusagen ein Bindeglied zwischen dem 
 Endlichen und dem Unendlichen - zwischen Säcken und Abgründen. Ein Kompakter Raum seinerseits 
 kann durchaus unendlich, ja sogar überabzählbar unendlich viele Elemente enthalten. Überdecken kann man diese aber immer mit
 einem endlichen System aus offenen Teilmengen des Raumes. Somit ist auf Kompakten Räumen folgende Schlussweise möglich:
 \\
 \begin{Satz}
-Sei \(O \in \mathcal{O}\) und \( \Psi(O) : \mbox{\glqq} O \mbox{ hat die Eigenschaft } \psi \mbox{\grqq} \) eine Aussage, 
-daher die Eigenschaft \(\psi\) trifft entweder auf \(O\) zu oder eben nicht.
-Gilt nun weiter:
-\begin{align}
-	U, V \in \mathcal{O} : \Psi(U) \land \Psi(V) &\Rightarrow \Psi(U \cup V) \label{eq:motivation:1}\\
-	\forall x \in X \; \exists U_x \in \mathcal{O} &: \Psi(U_x) \label{eq:motivation:2}
-\end{align}
-Dann ist auch \(\Psi(X)\) wahr, d.h. es gilt die Eigenschaft \(\psi\) für \(X\).
+	Sei \( (X, \mathcal{O}) \) ein kompakter Raum, \(O \in \mathcal{O}\) und 
+	\( \Psi(O) : \mbox{\glqq} O \mbox{ hat die Eigenschaft } \psi \mbox{\grqq} \) eine Aussage, 
+	daher die Eigenschaft \(\psi\) trifft entweder auf \(O\) zu oder eben nicht.
+	Gilt nun weiter:
+	\begin{align}
+		U, V \in \mathcal{O} : \Psi(U) \land \Psi(V) &\Rightarrow \Psi(U \cup V) \label{eq:motivation:1}\\
+		\forall x \in X \; \exists U_x \in \mathcal{O}, x \in U_x &: \Psi(U_x) \label{eq:motivation:2}
+	\end{align}
+	Dann ist auch \(\Psi(X)\) wahr, d.h. es gilt die Eigenschaft \(\psi\) für \(X\).
 \end{Satz}
 %
 \beweis{Beweis}
@@ -76,6 +77,8 @@ Dann ist auch \(\Psi(X)\) wahr, d.h. es gilt die Eigenschaft \(\psi\) für \(X\)
 \\
 \\
 Man beachte das hier Vollständige Induktion nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert.
+Ist zum Beispiel die Funktion \(f : X \mapsto \mathbb{R}}\) lokal beschränkt, d.h. zu jedem \(x \in X\) existiert eine Umgebung \(U_x\) so
+dass \(f(U_x)\) beschränkt ist, dann ist \(f\) beschränkt.
 
 \section{Beispiel}
 Man betrachte die Menge \( (0,1) \subset \mathbb{R} \). Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
