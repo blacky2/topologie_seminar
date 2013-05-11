@@ -1,42 +1,22 @@
 \chapter{Sätze über kompakte Räume}
+
+\section{Satz von Heine-Borel}
 %
 Hier eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zutaten für unser Endprodukt, den \glqq Satz von Heine-Borel\grqq, brauchen. \\
 %
 \\
 \includegraphics[width=16cm]{heineborel_skizze0.pdf}
 %
-\begin{Satz}
-Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
-Dann ist auch das Bild \( f(X) \) kompakt.
-\end{Satz}
-%
-\textbf{Beweis:}
-	\\
-	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung von \(f(X)\). Es ist zu zeigen,
-	dass eine endliche Teilüberdeckung existiert. 
-	\[ f(X) = \bigcup_{\lambda \in \Lambda} U_{\lambda} \Rightarrow X = 
-  	 f^{-1}(\bigcup_{\lambda \in \Lambda} U_{\lambda}) = 
-		 \bigcup_{\lambda \in \Lambda} f^{-1}(U_{\lambda}) \]
-	Da \(f\) stetig ist, sind die Urbilder \( f^{-1}(U_{\lambda}) \) der offenen Mengen \(U_{\lambda}\) wieder offen für 
-	alle \(\lambda \in \Lambda\). Somit ist \( ( f^{-1}(U_{\lambda}) | \lambda \in \Lambda ) \) eine offene Überdeckung
-	von \(X\). Zu dieser gibt es aufgrund der Kompaktheit von \(X\) ein endliches \( \Gamma \subset \Lambda \), mit 
-	der Eigenschaft \( X = \bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma}) \). Hieraus folgt:
-	\[ f(X) = f(\bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma})) = 
-  	 \bigcup_{\gamma \in \Gamma} f(f^{-1}(U_{\gamma})) = 
-	   \bigcup_{\gamma \in \Gamma} U_{\gamma} \]
-\qed
 
 \begin{Satz}
 	Ein kompakter Teilraum \(K\) eines metrischen Raumes \( (X, d) \) ist beschränkt, daher es gilt:
 	\[ \exists p \in K, n \in \mathbb{N} : K \subset B_n(p) := \{ x \in X | d(x,p) < n \} \]
 \end{Satz}
-%TODO Teilraum. .. 
 \beweis{Beweis} 
-	Das System \( (B_{n}(p) | n \in \mathbb{N}) \) der offenen Kugeln vom Radius \(n \in \mathbb{N}\) überdeckt 
-	den gesamten metrischen Raum \(X\), da man für jedes \(x \in X\) ein \(n \in \mathbb{N}\) findet mit \(d(p,x) < n\)
+	Sei \(p \in K\). Das System \( (B_{n}(p) | n \in \mathbb{N}) \) der offenen Kugeln um \(p\) vom Radius \(n \in \mathbb{N}\) 
+	überdeckt den gesamten metrischen Raum \(X\), da man für jedes \(x \in X\) ein \(n \in \mathbb{N}\) findet mit \(d(p,x) < n\),
 	also mit \(x \in B_{n}(p)\).
-	So gilt \(K \subset X = \bigcup_{n \in \mathbb{N}} B_{n}(p)\). 
-	Also wird insbesondere auch \(K\) überdeckt. 
+	So gilt \(K \subset X = \bigcup_{n \in \mathbb{N}} B_{n}(p)\) und es wird insbesondere auch \(K\) überdeckt. 
 	Da \(K\) kompakt ist gibt es ein \(m \in \mathbb{N} : K \subset \bigcup_{i=1}^{m} B_{i}(p) \). Hier ist
 	mit eingegangen, dass jede endliche Teilmenge von \(\mathbb{N}\) ein Maximum besitzt.
 	Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es folgt \(K \subset B_m(p)\).
@@ -48,8 +28,8 @@ Dann ist auch das Bild \( f(X) \) kompakt.
 \end{Satz}
 \beweis{Beweis} 
 	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) offene Überdeckung von \(I\). Zunächst zeigen wir,
-	dass ein \(\delta > 0\) existiert mit der Eigenschaft: Für alle \(p \in I\) liegt die \(B_{\delta}(p)\)
-	in einem \(U_{\lambda}, \lambda \in \Lambda\) liegt. Dies kann man auch so ausdrücken: 
+	dass ein \(\delta > 0\) existiert mit der Eigenschaft: Für alle \(p \in I\) liegt \(B_{\delta}(p)\)
+	in einem \(U_{\lambda}, \lambda \in \Lambda\). Dies kann man auch so ausdrücken: 
 	\[ \exists \delta > 0 : \forall p \in I \mbox{ gilt } B_{\delta}(p) \subset U_{\lambda} \mbox { für ein } \lambda \in \Lambda \]
 	Wir nehmen an das Gegenteil sei der Fall:
 	\[ \forall \delta > 0 : \exists p(\delta) \in I \mbox{ mit } B_{\delta}(p) \not\subset U_{\lambda} \mbox { für alle } \lambda \in \Lambda \]
@@ -129,56 +109,91 @@ Dann ist auch das Bild \( f(X) \) kompakt.
 \begin{Satz}
 	Ein endliches Produkt kompakter Räume ist wieder kompakt.
 \end{Satz}
-	%
-	\beweis{Beweis}
+%
+\beweis{Beweis}
+\\
+Wir zeigen wieder zunächst, dass das Produkt zweier kompakter Räume wieder kompakt ist. Da man hier ebenfalls keicht mit Induktion jedes endliche Produkt kompakter Räume 
+auf ein Produkt zweier kompakter Räume zurückführen kann. \\
+Nun seien \(X, Y\) zwei kompakte Räume.\\
+Ist \((U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung in \(X \times Y \). Jede Faser \( \{p\} \times Y, p \in X \) wird von endlich vielen \((U_{\lambda} \) überdeckt,
+da Y kompakt ist. Also gibt es eine Teilmenge \( I \subset \Lambda \) mit \( \{p\} \times Y \subset \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \). 
+Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \) 
+wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
+\qed\\
+\\
+{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
+%
+\\
+Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
+%	
+\begin{Satz}[Heine-Borel]
+	Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
+\end{Satz}
+%
+\beweis{Beweis} \\
+	Zu \(\Leftarrow \): \\
+	Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \) , liegt in einem abgeschlossenen n-dimensionalen Würfel\( Q \subset \mathbb{R}^n \). Dies folgt sofort aus der 
+	Beschränktheit der Menge \(A\). Da dieser Würfel \( Q \) ein Produkt aus abgeschlossenen und beschränkten Intervallen ist, ist er selbst kompakt.
 	\\
-	Wir zeigen wieder zunächst, dass das Produkt zweier kompakter Räume wieder kompakt ist. Da man hier ebenfalls keicht mit Induktion jedes endliche Produkt kompakter Räume 
-	auf ein Produkt zweier kompakter Räume zurückführen kann. \\
-	Nun seien \(X, Y\) zwei kompakte Räume.\\
-	Ist \((U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung in \(X \times Y \). Jede Faser \( \{p\} \times Y, p \in X \) wird von endlich vielen \((U_{\lambda} \) überdeckt,
-	da Y kompakt ist. Also gibt es eine Teilmenge \( I \subset \Lambda \) mit \( \{p\} \times Y \subset \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \). 
-	Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \) 
-	wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
-	\qed\\
+	Zu \(\Rightarrow \): \\
+	Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
+\qed \\
+%
+\\
+{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
+Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist.\\
+%
+Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
+relativ leicht entscheiden kann ob eine Teilmenge kompakt ist. 
+%
+
+\section{Weitere}
+% -----------------
+\begin{Satz}\label{satz:ftk:kompakt}
+	Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
+	Dann ist auch das Bild \( f(X) \) kompakt.
+\end{Satz}
+%
+\beweis{Beweis}
 	\\
-	{\bf Bemerkung:} Der Satz von Tychoff zeigt sogar, dass sogar überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
-	%
-	\\
-	Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
-	%	
-	\begin{Satz}[Heine-Borel]
-		Eine Teilmenge  \( A \subset \mathbb{R}^n \) ist kompakt \(\Leftrightarrow A \) ist abgeschlossen und beschränkt.
-	\end{Satz}
-	%
-	\beweis{Beweis} \\
-		Zu \(\Leftarrow \): \\
-		Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \) , liegt in einem abgeschlossenen n-dimensionalen Würfel\( Q \subset \mathbb{R}^n \). Dies folgt sofort aus der 
-		Beschränktheit der Menge \(A\). Da dieser Würfel \( Q \) ein Produkt aus abgeschlossenen und beschränkten Intervallen ist, ist er selbst kompakt.
-		\\
-		Zu \(\Rightarrow \): \\
-		Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz 3 abgeschlossen. Und wegen Satz ?? ist sie auch beschränkt.
-	\qed \\
-	%
-	\\
-	{\bf Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, \(\mathbb{R}^n \)ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
-	Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist.\\
-	%
-	Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
-	relativ leicht entscheiden kann ob eine Teilmenge kompakt ist. 
-	%
-	\begin{Satz}[Satz von Bolzano-Weierstraß]
-		Jede Folge in einem kompakten metrischen Raum \(K\) besitzt einen konvergente Teilfolge.
-	\end{Satz}
-	%
-	\beweis{Beweis}\\
-		Wir betrachten für beliebige \( p \in K \), die \( \frac{1}{n} \)- Umgebungen \( U_{\frac{1}{n},p} \subset K \) von \(p \). \\
-		Wir nehmen nun an die Folge besitzt keine konvergente Teilfolge, also in jeder Umgebung  \( U_{\frac{1}{n},p} \) findet man nur endlich viele Folgenglieder. 
-		Da K kompakt ist, überdecken endlich viele  \( U_{\frac{1}{n},p} \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
-		Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgenglieder im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
-		Raum eine konvergente Teilfolge.
-	\qed\\
-	%
-	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage: Dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
+	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung von \(f(X)\). Es ist zu zeigen,
+	dass eine endliche Teilüberdeckung existiert. 
+	\[ f(X) = \bigcup_{\lambda \in \Lambda} U_{\lambda} \Rightarrow X = 
+  	 f^{-1}(\bigcup_{\lambda \in \Lambda} U_{\lambda}) = 
+		 \bigcup_{\lambda \in \Lambda} f^{-1}(U_{\lambda}) \]
+	Da \(f\) stetig ist, sind die Urbilder \( f^{-1}(U_{\lambda}) \) der offenen Mengen \(U_{\lambda}\) wieder offen für 
+	alle \(\lambda \in \Lambda\). Somit ist \( ( f^{-1}(U_{\lambda}) | \lambda \in \Lambda ) \) eine offene Überdeckung
+	von \(X\). Zu dieser gibt es aufgrund der Kompaktheit von \(X\) ein endliches \( \Gamma \subset \Lambda \), mit 
+	der Eigenschaft \( X = \bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma}) \). Hieraus folgt:
+	\[ f(X) = f(\bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma})) = 
+  	 \bigcup_{\gamma \in \Gamma} f(f^{-1}(U_{\gamma})) = 
+	   \bigcup_{\gamma \in \Gamma} U_{\gamma} \]
+\qed
+
+\begin{Satz}
+	Sei \((X, \mathcal{O})\) ein kompakter Raum. Dann ist eine stetige Funktion \(f: X \mapsto \mathbb{R}\) 
+	beschränkt und nimmt ein Minimum und Maximum an.
+\end{Satz}
+%
+\beweis{Beweis}
+	Nach Satz \ref{satz:ftk:kompakt} ist das Bild von \( f(X) \subset \mathbb{R} \) kompakt. Mit Heine-Borel 
+	folgt sofort die Beschränkt- und Abgeschlossenheit. Daher \(f(X)\) enthält sein Supremum und Infimum.
+\qed
+
+% -----------------
+\begin{Satz}[Satz von Bolzano-Weierstraß]
+	Jede Folge in einem kompakten metrischen Raum \(K\) besitzt einen konvergente Teilfolge.
+\end{Satz}
+%
+\beweis{Beweis}\\
+	Wir betrachten für beliebige \( p \in K \), die \( \frac{1}{n} \)- Umgebungen \( U_{\frac{1}{n},p} \subset K \) von \(p \). \\
+	Wir nehmen nun an die Folge besitzt keine konvergente Teilfolge, also in jeder Umgebung  \( U_{\frac{1}{n},p} \) findet man nur endlich viele Folgenglieder. 
+	Da K kompakt ist, überdecken endlich viele  \( U_{\frac{1}{n},p} \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
+	Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgenglieder im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
+	Raum eine konvergente Teilfolge.
+\qed\\
+%
+\textbf{Bemerkung:} Die Aussage dieses Satzes ist äquivalent mit der Aussage, dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
 		
 	
 
