@@ -1,45 +1,25 @@
 \chapter{Sätze über kompakte Räume}
+
+\section{Satz von Heine-Borel}
 %
 Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zutaten für unser Endprodukt, den \glqq Satz von Heine-Borel\grqq, brauchen. \\
 %
 \\
 \input{heineborel_skizze0.pdf_tex}
 %
-\begin{Satz}
-Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
-Dann ist auch das Bild \( f(X) \) kompakt.
-\end{Satz}
-%
-\textbf{Beweis:}
-	\\
-	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung von \(f(X)\). Es ist zu zeigen,
-	dass eine endliche Teilüberdeckung existiert. 
-	\[ f(X) = \bigcup_{\lambda \in \Lambda} U_{\lambda} \Rightarrow X = 
-  	 f^{-1}(\bigcup_{\lambda \in \Lambda} U_{\lambda}) = 
-		 \bigcup_{\lambda \in \Lambda} f^{-1}(U_{\lambda}) \]
-	Da \(f\) stetig ist, sind die Urbilder \( f^{-1}(U_{\lambda}) \) der offenen Mengen \(U_{\lambda}\) wieder offen für 
-	alle \(\lambda \in \Lambda\). Somit ist \( ( f^{-1}(U_{\lambda}) | \lambda \in \Lambda ) \) eine offene Überdeckung
-	von \(X\). Zu dieser gibt es aufgrund der Kompaktheit von \(X\) ein endliches \( \Gamma \subset \Lambda \), mit 
-	der Eigenschaft \( X = \bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma}) \). Hieraus folgt:
-	\[ f(X) = f(\bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma})) = 
-  	 \bigcup_{\gamma \in \Gamma} f(f^{-1}(U_{\gamma})) = 
-	   \bigcup_{\gamma \in \Gamma} U_{\gamma} \]
-\qed
 
 \begin{Satz}
 	Ein kompakter Teilraum \(K\) eines metrischen Raumes \( (X, d) \) ist beschränkt, daher es gilt:
 	\[ \exists p \in K, n \in \mathbb{N} : K \subset B_n(p) := \{ x \in X | d(x,p) < n \} \]
 \end{Satz}
-%TODO Teilraum. .. 
 \beweis{Beweis} 
-Das System \( (B_{n}(p) | n \in \mathbb{N}) \) der offenen Kugeln vom Radius \(n \in \mathbb{N}\) überdeckt 
-den gesamten metrischen Raum \(X\), da man für jedes \(x \in X\) ein \(n \in \mathbb{N}\) findet mit \(d(p,x) < n\)
-also mit \(x \in B_{n}(p)\).
-So gilt \(K \subset X = \bigcup_{n \in \mathbb{N}} B_{n}(p)\). 
-Also wird insbesondere auch \(K\) überdeckt. 
-Da \(K\) kompakt ist gibt es ein \(m \in \mathbb{N} : K \subset \bigcup_{i=1}^{m} B_{i}(p) \). Hier ist
-mit eingegangen, dass jede endliche Teilmenge von \(\mathbb{N}\) ein Maximum besitzt.
-Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es folgt \(K \subset B_m(p)\).
+	Sei \(p \in K\). Das System \( (B_{n}(p) | n \in \mathbb{N}) \) der offenen Kugeln um \(p\) vom Radius \(n \in \mathbb{N}\) 
+	überdeckt den gesamten metrischen Raum \(X\), da man für jedes \(x \in X\) ein \(n \in \mathbb{N}\) findet mit \(d(p,x) < n\),
+	also mit \(x \in B_{n}(p)\).
+	So gilt \(K \subset X = \bigcup_{n \in \mathbb{N}} B_{n}(p)\) und es wird insbesondere auch \(K\) überdeckt. 
+	Da \(K\) kompakt ist gibt es ein \(m \in \mathbb{N} : K \subset \bigcup_{i=1}^{m} B_{i}(p) \). Hier ist
+	mit eingegangen, dass jede endliche Teilmenge von \(\mathbb{N}\) ein Maximum besitzt.
+	Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es folgt \(K \subset B_m(p)\).
 \qed
 
 \begin{Satz}
@@ -47,6 +27,18 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	ist \(I\) kompakt.
 \end{Satz}
 \beweis{Beweis} 
+	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) offene Überdeckung von \(I\). Zunächst zeigen wir,
+	dass ein \(\delta > 0\) existiert mit der Eigenschaft: Für alle \(p \in I\) liegt \(B_{\delta}(p)\)
+	in einem \(U_{\lambda}, \lambda \in \Lambda\). Dies kann man auch so ausdrücken: 
+	\[ \exists \delta > 0 : \forall p \in I \mbox{ gilt } B_{\delta}(p) \subset U_{\lambda} \mbox { für ein } \lambda \in \Lambda \]
+	Wir nehmen an das Gegenteil sei der Fall:
+	\[ \forall \delta > 0 : \exists p(\delta) \in I \mbox{ mit } B_{\delta}(p) \not\subset U_{\lambda} \mbox { für alle } \lambda \in \Lambda \]
+	Da diese Aussage für alle \(\delta > 0\) gilt, ist es erlaubt \(\delta = \frac{1}{n}\) zu setzen, wobei \(n \in \mathbb{N}\) ist.
+	Somit haben wir auf dem Intervall \(I\) eine Folge \(p_{n} := p(\frac{1}{n})\) gefunden, mit der Eigenschaft, dass für alle \(\lambda \in \Lambda\)
+	gilt \(B_{\frac{1}{n}}(p_{n}) \not\subset U_{\lambda}\). Nach dem aus der Analysis bekannten Satz von Bolzano-Weiherstraß gibt
+	es zu jeder Folge auf dem Intervall \(I\) eine konvergente Teilfolge. Also dürfen wir annehmen, dass eine Teilfolge \(p_{n_k}\) gegen 
+	ein \(p \in I\)  konvergiert. Konvergenz sagt ja gerade aus, dass es zu jeder Umgebung \(U\) von \(p\) ein \(n_0 \in \mathbb{N}\) gibt, 
+	ab dem die Folgenglieder in dieser Umgebung verweilen. Dies wiederum heißt es existiert ein \(B_{\epsilon}(p) \subset U_{\lambda}\) für ein \(\lambda \in \Lambda\).
 \qed
 
 \begin{Satz}
@@ -117,10 +109,11 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 \begin{Satz}
 	Ein endliches Produkt kompakter Räume ist wieder kompakt.
 \end{Satz}
+<<<<<<< HEAD
 	%
 	\beweis{Beweis}
 	\\
-	Wir zeigen wieder zunächst, dass das Produkt zweier kompakter Räume wieder kompakt ist. Da man hier ebenfalls keicht mit Induktion jedes endliche Produkt kompakter Räume 
+	Wir zeigen wieder zunächst, dass das Produkt zweier kompakter Räume wieder kompakt ist. Da man hier ebenfalls leicht mit Induktion jedes endliche Produkt kompakter Räume 
 	auf ein Produkt zweier kompakter Räume zurückführen kann. \\
 	Nun seien \(X, Y\) zwei kompakte Räume.\\
 	Ist \((U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung in \(X \times Y \). Jede Faser \( \{p\} \times Y, p \in X \) wird von endlich vielen \(U_{\lambda} \) überdeckt,
@@ -155,6 +148,38 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
 	jetzt relativ leicht entscheiden kann ob eine Teilmenge kompakt ist. 
 	%
+\section{Weitere}
+% 
+\begin{Satz}\label{satz:ftk:kompakt}
+	Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \mapsto Y\) stetig.
+	Dann ist auch das Bild \( f(X) \) kompakt.
+\end{Satz}
+%
+\beweis{Beweis}
+	\\
+	Sei \( (U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung von \(f(X)\). Es ist zu zeigen,
+	dass eine endliche Teilüberdeckung existiert. 
+	\[ f(X) = \bigcup_{\lambda \in \Lambda} U_{\lambda} \Rightarrow X = 
+  	 f^{-1}(\bigcup_{\lambda \in \Lambda} U_{\lambda}) = 
+		 \bigcup_{\lambda \in \Lambda} f^{-1}(U_{\lambda}) \]
+	Da \(f\) stetig ist, sind die Urbilder \( f^{-1}(U_{\lambda}) \) der offenen Mengen \(U_{\lambda}\) wieder offen für 
+	alle \(\lambda \in \Lambda\). Somit ist \( ( f^{-1}(U_{\lambda}) | \lambda \in \Lambda ) \) eine offene Überdeckung
+	von \(X\). Zu dieser gibt es aufgrund der Kompaktheit von \(X\) ein endliches \( \Gamma \subset \Lambda \), mit 
+	der Eigenschaft \( X = \bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma}) \). Hieraus folgt:
+	\[ f(X) = f(\bigcup_{\gamma \in \Gamma} f^{-1}(U_{\gamma})) = 
+  	 \bigcup_{\gamma \in \Gamma} f(f^{-1}(U_{\gamma})) = 
+	   \bigcup_{\gamma \in \Gamma} U_{\gamma} \]
+\qed
+
+\begin{Satz}
+	Sei \((X, \mathcal{O})\) ein kompakter Raum. Dann ist eine stetige Funktion \(f: X \mapsto \mathbb{R}\) 
+	beschränkt und nimmt ein Minimum und Maximum an.
+\end{Satz}
+%
+\beweis{Beweis}
+	Nach Satz \ref{satz:ftk:kompakt} ist das Bild von \( f(X) \subset \mathbb{R} \) kompakt. Mit Heine-Borel 
+	folgt sofort die Beschränkt- und Abgeschlossenheit. Daher \(f(X)\) enthält sein Supremum und Infimum.
+\qed
 	\begin{Satz}[Satz von Bolzano-Weierstraß]
 		Jede Folge in einem kompakten metrischen Raum \(K\) besitzt einen konvergente Teilfolge.
 	\end{Satz}
@@ -168,6 +193,6 @@ Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es f
 	\qed\\
 	%
 	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage: Dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
-		
+	%
 	
 

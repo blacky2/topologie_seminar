@@ -9,9 +9,9 @@
 		\item \( U_{\lambda} \in \mathcal{O} \ \forall \lambda \in \Lambda \Rightarrow \bigcup_{\lambda \in \Lambda} U_{\lambda} \)
 	\end{enumerate}
 \end{Def}
-{\bf Bemerkung:} Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
+\textbf{Bemerkung:} Im Folgenden sei \((X,\mathcal{O})\) ein topologischer Raum.
 \\
-{\bf Bemerkung:} Mengen \(O \in \mathcal{O} \) heißen offen. Eine Menge \(B \subset X\) heißt abgeschlossen, wenn ihr Komplement \( X \backslash A\) offen ist.
+\textbf{Bemerkung:} Mengen \(O \in \mathcal{O} \) heißen offen. Eine Menge \(B \subset X\) heißt abgeschlossen, wenn ihr Komplement \( X \backslash A\) offen ist.
 
 \begin{Def}[Umgebung eines Punktes] 
 	Eine Menge \(U \subset X\) heißt \defH{Umgebung eines Punktes} \(p \in X\), wenn es eine offene Menge \(O \subset X\) gibt für die gilt: 
@@ -31,8 +31,15 @@
 	Eine Familie \( (U_{\lambda} | \lambda \in \Lambda) \) mit \(U_{\lambda} \in \mathcal{O} \) für alle \( \lambda \in \Lambda \) heißt 	offene Überdeckung von X, wenn gilt:
 	\[ \bigcup_{\lambda \in \Lambda } U_{\lambda} = X \]
 \end{Def}
+\textbf{Bemerkug:} Ist \(X \subset Y\) ein Teilraum und sind die \(U_{\lambda}\) offen in \(Y\), so heißt die Familie \( (U_{\lambda} | \lambda \in \Lambda) \) offene Überdeckung von
+\(X\), wenn gilt \(X \subset \bigcup_{\lambda \in \Lambda} U_{\lambda}\).
+\\
+\textbf{Bemerkug:} \(\Lambda\) ist eine belibige Indexmenge. Ist diese endlicher Mächtigkeit, also \(|\Lambda| < \infty\), so nennt man auch die Überdeckung endlich. 
+\\
+\textbf{Bemerkug:} Eine Überdeckung \( (U_{\gamma} | \gamma \in \Gamma) \)  heißt Teilüberdeckung von \( (U_{\lambda} | \lambda \in \Lambda \), wenn \(\Gamma \subset \Lambda\). 
 
-	
-
-
-
+\begin{Def}[Offene Kugel]
+	Sei \((X,d)\) ein metrischer Raum, \(p \in X\) und \(\epsilon \in \mathbb{R}\). Dann nennt man
+	\[ B_{\epsilon}(p) := \{ x \in X | d(p,x) < \epsilon \} \]
+	offene Kugel um den Punkt \(p\) mit Radius \(\epsilon\) oder auch \(\epsilon-Umgebung\) von \(p\).
+\end{Def}
