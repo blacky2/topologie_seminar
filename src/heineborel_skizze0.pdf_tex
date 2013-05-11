@@ -1,0 +1,74 @@
+%% Creator: Inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'heineborel_skizze0.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{447.5bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.68513966)%
+    \put(0,0){\includegraphics[width=\unitlength]{heineborel_skizze0.pdf}}%
+    \put(0.16775823,0.65987307){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.71667126\unitlength}\raggedright \\ \end{minipage}}}%
+    \put(0.163559,0.66685925){\makebox(0,0)[lt]{\begin{minipage}{0.72206063\unitlength}\raggedright  \textbf {Satz von Heine Borel: }\\ \\  Eine Teilmenge  $ A \subset \mathbb{R} $ ist kompakt, \\ \\  genau dann wenn $A$ abgeschlossen und beschränkt ist. \end{minipage}}}%
+    \put(0.01524976,0.24520946){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Ein kompakter Teilraum $K$ eines 
+}}}%
+    \put(0.55917667,0.39740142){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Ein Intervall [a, b]  in $ \mathbb{R} $  
+}}}%
+    \put(0.55917667,0.20945528){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Ein Produkt kompakter Räume   }}}%
+    \put(0.55079905,0.25930988){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ Tubenlemma }}}%
+    \put(0.55917667,0.08380522){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Eine abgeschlossene Teilmenge eines  }}}%
+    \put(0.68643104,0.38660144){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{
+
+}}}%
+    \put(0.14299055,0.50097146){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21650995\unitlength}\raggedright \large {$ \Rightarrow $}\end{minipage}}}%
+    \put(0.01451769,0.38747228){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.39862958\unitlength}\raggedright dann ist $A$ auch abgeschlossen in $X$.\end{minipage}}}%
+    \put(0.01386816,0.22991887){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41678163\unitlength}\raggedright metrischen Raumes $(X, d)$  ist beschränkt.\end{minipage}}}%
+    \put(0.55945927,0.38724206){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.38863532\unitlength}\raggedright ist kompakt .\end{minipage}}}%
+    \put(0.55945927,0.19951966){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.39946086\unitlength}\raggedright ist wieder kompakt.\end{minipage}}}%
+    \put(0.55945247,0.0654157){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.42680276\unitlength}\raggedright kompakten Raumes ist selbst kompakt.\end{minipage}}}%
+    \put(0.59464342,0.50243296){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21650995\unitlength}\raggedright \large {$ \Leftarrow $}\end{minipage}}}%
+    \put(0.01589151,0.41428793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41650667\unitlength}\raggedright Ist die Teilmenge $ A \subset X $ kompakt,\end{minipage}}}%
+  \end{picture}%
+\endgroup%

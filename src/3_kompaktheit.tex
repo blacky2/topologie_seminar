@@ -81,12 +81,11 @@ Ist zum Beispiel die Funktion \(f : X \mapsto \mathbb{R}}\) lokal beschränkt, d
 dass \(f(U_x)\) beschränkt ist, dann ist \(f\) beschränkt.
 
 \section{Beispiel}
-Man betrachte die Menge \( (0,1) \subset \mathbb{R} \). Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
-Nehme man zum Beispiel die offene Überdeckung \( (-n,n) \subset \mathbb{R} , n \in \mathbb{N} \), diese überdeckt sogar ganz \(  \mathbb{R} \). 
-Und \( (-1,1)  \) überdeckt schon unsere ganze Menge \( (0,1)  \). \\
-Also hat diese offene Überdeckung eine endliche offene Überdeckung die ganz \( (0,1)  \) überdeckt.
-Aber laut Definition von kompakten Räumen muss jede offene Überdeckung eine endliche offene Teilüberdeckung besitzen. Betrachtet man nun die offene Überdeckung 
-\( U_{i}=(0,1-\frac{1}{i}), i \in \mathbb{N} \), so ist \(\bigcup_{i \in \mathbb{N}} U{i} = (0,1) \). Wenn \( (0,1)  \) kompakt wäre, 
+Man betrachte die Menge \( (0,1) \subset \mathbb{R} \).\\ Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
+Nehme man zum Beispiel die offene Überdeckung \( S_{n} := (-n,n) \subset \mathbb{R} , n \in \mathbb{N} \), diese überdeckt sogar ganz \(  \mathbb{R} \). 
+Und \( S_{1} = (-1,1)  \) überdeckt schon unsere ganze Menge \( (0,1) \). \\
+Also hat diese offene Überdeckung eine endliche offene Überdeckung die ganz \( (0,1)\) überdeckt.
+Aber laut Definition von kompakten Räumen muss jede offene Überdeckung eine endliche offene Teilüberdeckung besitzen. Wir haben nun aber nur eine offene Überdeckung betrachtet. Betrachtet man nun nämlich die offene Überdeckung \( U_{i}=(0,1-\frac{1}{i}), i \in \mathbb{N} \), so ist \(\bigcup_{i \in \mathbb{N}} U{i} = (0,1) \). Wenn \( (0,1)  \) kompakt wäre, 
 so würde es nun eine Teilmenge \(I \subset \mathbb{N} \) geben mit \(\bigcup_{i \in I} = (0,1) \).
 Da \(I\) eine endliche Teilmenge ist, besitzt \(I\) ein Maximum \( m \in \mathbb{N} \). Wählt man \(x \in (1-\frac{1}{m},1) \), dann ist \(x \in (0,1) \) aber nicht in 
 \(\bigcup_{i \in I} U_{i}\). Also war die Annahme falsch, dass jede offene Überdeckung eine endliche Teilüberdeckung enthält. Daher ist der die Menge \((0,1) \) nicht kompakt.
