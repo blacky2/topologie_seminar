@@ -1,5 +1,5 @@
 \chapter{Kompakte Räume}
-Im folgendenden Kapitel werden kompakte Räume definiert und motiviert. Weiterhin wird eine Charakterisierung von Kompaktheit gegeben.
+Im folgendenden Kapitel werden kompakte Räume definiert und motiviert. Weiterhin wird eine Charakterisierung jener Räume gegeben.
 Nun aber endlich zur Definition von Kompakten Räumen.
 
 \begin{Def}[Kompaktheit]
@@ -13,7 +13,7 @@ Man kann durch Übergang zu Komplementen folgende Charakterisierung finden:
 \begin{Satz}[Charakterisierung Kompaktheit]
 	Ein hausdorffscher Raum \((X, \mathcal{O})\) ist genau dann \textbf{kompakt}, wenn gilt:
 	\begin{align*}
-		(A_{\lambda}| \lambda \in \Lambda) \mbox{ Familie } & \mbox{abgeschlossener Mengen in } X \mbox{ mit } 
+		(A_{\lambda}| \lambda \in \Lambda) \mbox{ Familie } & \mbox{in } X \mbox{ abgeschlossener Mengen mit } 
 		\bigcap_{\lambda \in \Lambda} A_{\lambda} = \emptyset \\
 		\Rightarrow \exists \Gamma \subset \Lambda : |\Gamma| < \infty & \land \bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset
 	\end{align*} 
@@ -76,9 +76,12 @@ einem endlichen System aus offenen Teilmengen des Raumes. Somit ist auf Kompakte
 \qed
 \\
 \\
-Man beachte das hier Vollständige Induktion nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert.
-Ist zum Beispiel die Funktion \(f : X \mapsto \mathbb{R}}\) lokal beschränkt, d.h. zu jedem \(x \in X\) existiert eine Umgebung \(U_x\) so
-dass \(f(U_x)\) beschränkt ist, dann ist schon \(f\) beschränkt. 
+Man beachte das hier Vollständige Induktion nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert bzw. \(X\) kompakt ist.
+Ist zum Beispiel die Funktion \(f : X \mapsto \mathbb{R}}\) lokal beschränkt, d.h. zu jedem \(x \in X\) existiert eine Umgebung \(U_x\), mit \(f(U_x)\) ist beschränkt, 
+dann ist schon \(f\) beschränkt (Für \(U,V \in \mathcal{O}\) ist \(f(U \cup V)\) durch das Minimum der unteren und das Maximum der oberen 
+Schranken von \(f(V), f(U)\) beschränkt). Setzt man \(f(x):=\frac{1}{x}\) und \(X:=(0,1)\), so ist \(f\) lokal beschränkt.
+Für \(f(X)\) jedoch lässt sich keine obere Schranke angeben, weil \((0,1)\) nunmal nicht kompakt ist.
+
 
 \section{Beispiel}
 Man betrachte die Menge \( (0,1) \subset \mathbb{R} \).\\ Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
