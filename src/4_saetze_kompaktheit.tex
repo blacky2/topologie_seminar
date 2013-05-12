@@ -2,7 +2,7 @@
 
 \section{Satz von Heine-Borel}
 %
-Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zutaten für unser Endprodukt, den \glqq Satz von Heine-Borel\grqq, brauchen. \\
+Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zutaten für unser Endprodukt, den \glqq Satz von Heine-Borel\grqq, brauchen. \\
 %
 \\
 \input{heineborel_skizze0.pdf_tex}
@@ -39,11 +39,11 @@ Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zuta
 	dass ein \(\delta > 0\) existiert mit der Eigenschaft: Für alle \(p \in I\) liegt \(B_{\delta}(p)\)
 	in einem \(U_{\lambda}, \lambda \in \Lambda\). Dies kann man auch so ausdrücken: 
 	\[ \exists \delta > 0 : \forall p \in I \mbox{ gilt } B_{\delta}(p) \subset U_{\lambda} \mbox { für ein } \lambda \in \Lambda \]
-	Wir nehmen an das Gegenteil sei der Fall:
+	Wir nehmen an, das Gegenteil sei der Fall:
 	\[ \forall \delta > 0 : \exists p(\delta) \in I \mbox{ mit } B_{\delta}(p(\delta)) \not\subset U_{\lambda} \mbox { für alle } \lambda \in \Lambda \]
 	Da diese Aussage für alle \(\delta > 0\) gilt, ist es erlaubt \(\delta = \frac{1}{n}\) zu setzen, wobei \(n \in \mathbb{N}\) ist.
 	Somit haben wir auf dem Intervall \(I\) eine Folge \(p_{n} := p(\frac{1}{n})\) gefunden mit der Eigenschaft, dass für alle \(\lambda \in \Lambda\)
-	gilt \(B_{\frac{1}{n}}(p_{n}) \not\subset U_{\lambda}\). Nach dem aus der Analysis bekannten Satz von Bolzano-Weiherstraß gibt
+	gilt: \(B_{\frac{1}{n}}(p_{n}) \not\subset U_{\lambda}\). Nach dem aus der Analysis bekannten Satz von Bolzano-Weiherstraß gibt
 	es zu jeder Folge auf dem Intervall \(I\) eine konvergente Teilfolge. Also dürfen wir zu einer konvergenten Teilfolge mit Limes \(p \in I\) übergehen.
   Konvergenz sagt ja gerade aus, dass es zu jeder Umgebung \(U\) von \(p\) ein \(n_0 \in \mathbb{N}\) gibt, 
 	ab dem die Folgenglieder in dieser Umgebung verweilen. Dies wiederum heißt, es existiert ein \(B_{\epsilon}(p) \subset U_{\lambda}\) für ein \(\lambda \in \Lambda\)
@@ -122,15 +122,15 @@ Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zuta
 	induktiv auf ein Produkt zweier Räume zurückführen kann. \\
 	Seien \(X, Y\) zwei hausdorffsche topologische Räume.\\
 	Seien weiter \( (p,q), (x,y) \in X \times Y \mbox{ wobei } (p,q) \ne (x,y) \). \\
-	Laut Vorraussetzungen ist \(X\) und \(Y\) jeweils hausdorfsch, also folgt: 
+	Laut Vorraussetzungen ist \(X\) und \(Y\) jeweils hausdorffsch, also folgt: 
 	\begin{align}
 		x &\ne p \mbox{ oder }\label{eq:produkt1}\\ 
 		y &\ne q\label{eq:produkt2} 
 	\end{align}
-	Zu \eqref{eq:produkt1} da \(x \ne p \) ist haben \(x, p \) Umgebungen \(A, B \) mit \( A \in U(x)  \land B \in U(p) \) für die gilt: \(A \cap B = \emptyset \).\\ Daher gibt es die
+	Zu \eqref{eq:produkt1} da \(x \ne p \) ist, haben \(x, p \) Umgebungen \(A, B \) mit \( A \in U(x)  \land B \in U(p) \), für die gilt: \(A \cap B = \emptyset \).\\ Daher gibt es die
 	zwei Umgebungen \( (A \times Y), (B \times Y) \) mit \( (A \times Y) \cap (B \times Y) = \emptyset \). \\
 	Setzt man bei \eqref{eq:produkt2} mit dem gleichen Ansatz an, so folgt leicht, dass \( (X \times Y) \) hausdorffsch ist, da wir gerade gezeigt haben, falls mindestens eine Komponente
-	nicht gleich ist existieren fremde Umgebungen zu zwei nicht gleichen Punktepaaren\( (p,q), (x,y) \), was genau der Definition von hausdorffsch entspricht.
+	nicht gleich ist, existieren fremde Umgebungen zu zwei nicht gleichen Punktepaaren\( (p,q), (x,y) \), was genau der Definition von hausdorffsch entspricht.
 \qed
 
 \begin{Satz}\label{satz:prodkomp}
@@ -144,8 +144,8 @@ Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zuta
 	Nun seien \(X, Y\) zwei kompakte Räume.\\
 	Ist \((U_{\lambda} | \lambda \in \Lambda) \) eine offene Überdeckung in \(X \times Y \). Jede Faser \( \{p\} \times Y, p \in X \) wird von endlich vielen \(U_{\lambda} \) überdeckt,
 	da Y kompakt ist. Also gibt es eine Teilmenge \( I \subset \Lambda \) mit \( \{p\} \times Y \subset \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \). 
-	Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \) 
-	wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
+	Nach dem Tubenlemma überdeckt \( \bigcup_{ \lambda \in I } \{p\} \times U_{\lambda} \) noch eine Menge \(\bigcup_{ p \in X } V_{p} \times Y \mbox{ mit } V_{p} \in X \),
+	 wobei \( V_{p} \) eine offene Umgebung von \( p \in X \) ist. Da X kompakt ist überdecken, auch hier bereits endlich viele \(V_{p} \mbox{ ganz } X \). 
 \qed
 
 \begin{figure}[ht]
@@ -155,7 +155,7 @@ Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zuta
 	\caption{Illustration zu Satz \ref{satz:prodkomp}}
 \end{figure}
 	
-\textbf{Bemerkung:} Der Satz von Tychoff zeigt sogar, dass überabzählbare Produkte kompakte Räume wieder kompakt sind. \\
+\textbf{Bemerkung:} Der Satz von Tychoff zeigt sogar, dass überabzählbare Produkte kompakter Räume wieder kompakt sind. \\
 %
 \\
 Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel zurück kommen.
@@ -166,7 +166,8 @@ Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel z
 %
 \beweis{Beweis} \\
 	Zu \(\Leftarrow \): \\
-	Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \), liegt in einem abgeschlossenen n-dimensionalen Würfel \( Q_r:= \{ x \in \mathbb{R}^n | \; |x_i| \leq r \quad i=1, \dots, n\} \subset \mathbb{R}^n \). 
+	Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \), liegt in einem abgeschlossenen n-dimensionalen Würfel
+	\( Q_r:= \{ x \in \mathbb{R}^n | \; |x_i| \leq r \quad i=1, \dots, n\} \subset \mathbb{R}^n \). 
 	Dies folgt sofort aus der Beschränktheit der Menge \(A\). Der Würfel \(Q_r\) ist als Produkt abgeschlossener und beschränkter Intervalle nach den Sätzen \ref{satz:prodkomp} und \ref{satz:intervall} kompakt.
 	Mit Satz \ref{satz:abgeschlkomp} folgt die Kompaktheit der darin enthaltenen abgeschlossenen Mengen.
 	\\
@@ -185,7 +186,8 @@ jetzt relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.
 \section{Weitere}
 % 
 \begin{Satz}\label{satz:ftk:kompakt}
-	Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorfscher Raum, sowie \(f: X \to Y\) stetig.
+	Sei \( (X, \mathcal{O}_x) \) ein kompakter Raum und \((Y, \mathcal{O}_y)\) hausdorffscher Raum, sowie \\
+	\(f: X \to Y\) stetig.
 	Dann ist auch das Bild \( f(X) \) kompakt.
 \end{Satz}
 %
@@ -212,21 +214,21 @@ jetzt relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.
 %
 \beweis{Beweis}
 	Nach Satz \ref{satz:ftk:kompakt} ist das Bild von \( f(X) \subset \mathbb{R} \) kompakt. Mit Heine-Borel 
-	folgt sofort die Beschränkt- und Abgeschlossenheit. Daher \(f(X)\) enthält sein Supremum und Infimum.
+	folgt sofort die Beschränkt- und Abgeschlossenheit. Daher enthält \(f(X)\) sein Supremum und Infimum.
 \qed
 	\begin{Satz}[Satz von Bolzano-Weierstraß]
-		Jede Folge in einem kompakten metrischen Raum \(K\) besitzt einen konvergente Teilfolge.
+		Jede Folge in einem kompakten metrischen Raum \(K\) besitzt eine konvergente Teilfolge.
 	\end{Satz}
 	%
 	\beweis{Beweis}\\
-		Wir betrachten für beliebige \( p \in K \), die \( \frac{1}{n} \) - Umgebungen \( U_{\frac{1}{n},\;p} \subset K \) von \(p \). \\
-		Wir nehmen nun an die Folge besitzt keine konvergente Teilfolge, also in jeder Umgebung  \( U_{\frac{1}{n},\;p} \) findet man nur endlich viele Folgenglieder. 
-		Da K kompakt ist, überdecken endlich viele  \( U_{\frac{1}{n},\;p} \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
-		Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgenglieder im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
+		Wir betrachten für beliebige \( p \in K \), die offenen Kugeln \( B_{\frac{1}{n}}(p) \) um \(p \), mit dem Radius \( \frac{1}{n},\; n \in \mathbb{N}\). \\
+		Wir nehmen nun an, die Folge besitzt keine konvergente Teilfolge, also in jeder offenen Kugel \( B_{\frac{1}{n}}(p) \) findet man nur endlich viele Folgenglieder. 
+		Da K kompakt ist, überdecken endlich viele  \( B_{\frac{1}{n}}(p) \) den ganzen Raum \( K \), daher hätte die Folge insgesamt nur endlich viele Folgenglieder.\\
+		Das ist aber ein Widerspruch, da die ganze Folge mit unendlich vielen Folgengliedern im Raum \(K \) wohnt. Also war die Annahme falsch und somit besitzt jede Folge in einem kompakten
 		Raum eine konvergente Teilfolge.
 	\qed\\
 	%
-	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage: Dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
+	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage, das jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
 	%
 	
 

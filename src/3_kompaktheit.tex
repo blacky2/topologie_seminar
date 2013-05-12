@@ -22,7 +22,7 @@ Man kann durch Übergang zu Komplementen folgende Charakterisierung finden:
 	\\
 	\glqq\(\Leftarrow\)\grqq
 	\\
-	Gelte nun für belibige Familien abgeschlossener Mengen \((A_{\lambda}| \lambda \in \Lambda)\) mit der Eigenschaft
+	Gelte nun für beliebige Familien abgeschlossener Mengen \((A_{\lambda}| \lambda \in \Lambda)\) mit der Eigenschaft
 	\(\bigcap_{\lambda \in \Lambda} A_{\lambda} = \emptyset\), dass eine endliche Teilmenge \(\Gamma \subset \Lambda\) existiert mit
 	\(\bigcap_{\gamma \in \Gamma} A_{\gamma} = \emptyset\) und sei \( (U_{\omega} | \omega \in \Omega) \) offene Überdeckung
 	von \(X\). So setze \(A_{\omega} = X \backslash U_{\omega} \; \forall \omega \in \Omega\), d.h. \(A_{\omega}\) ist abgeschlossen
@@ -41,15 +41,15 @@ Man kann durch Übergang zu Komplementen folgende Charakterisierung finden:
 \qed
 
 \section{Motivation}
-Warum ist denn Kompaktheit überhaupt eine beachtenswerte Eigenschaft? Nun sie ist sozusagen ein Bindeglied zwischen dem 
+Warum ist denn Kompaktheit überhaupt eine beachtenswerte Eigenschaft? Nun, sie ist sozusagen ein Bindeglied zwischen dem 
 Endlichen und dem Unendlichen - zwischen Säcken und Abgründen. Ein Kompakter Raum seinerseits 
 kann durchaus unendlich, ja sogar überabzählbar unendlich viele Elemente enthalten. Überdecken kann man diese aber immer mit
-einem endlichen System aus offenen Teilmengen des Raumes. Somit ist auf Kompakten Räumen folgende Schlussweise möglich:
+einem endlichen System aus offenen Teilmengen des Raumes. Somit ist auf kompakten Räumen folgende Schlussweise möglich:
 \\
 \begin{Satz}
 	Sei \( (X, \mathcal{O}) \) ein kompakter Raum, \(O \in \mathcal{O}\) und 
 	\( \Psi(O) : \mbox{\glqq} O \mbox{ hat die Eigenschaft } \psi \mbox{\grqq} \) eine Aussage, 
-	daher die Eigenschaft \(\psi\) trifft entweder auf \(O\) zu oder eben nicht.
+	daher trifft die Eigenschaft \(\psi\) entweder auf \(O\) zu, oder eben nicht.
 	Gilt nun weiter:
 	\begin{align}
 		U, V \in \mathcal{O} : \Psi(U) \land \Psi(V) &\Rightarrow \Psi(U \cup V) \label{eq:motivation:1}\\
@@ -76,7 +76,7 @@ einem endlichen System aus offenen Teilmengen des Raumes. Somit ist auf Kompakte
 \qed
 \\
 \\
-Man beachte das hier Vollständige Induktion nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert bzw. \(X\) kompakt ist.
+Man beachte, dass hier Vollständige Induktion nur anwendbar ist, da eine endliche offene Teilüberdeckung von \( (U_x | x \in X) \) existiert bzw. \(X\) kompakt ist.
 Ist zum Beispiel die Funktion \(f : X \to \mathbb{R}\) lokal beschränkt, d.h. zu jedem \(x \in X\) existiert eine Umgebung \(U_x\), mit \(f(U_x)\) ist beschränkt, 
 dann ist schon \(f\) beschränkt (Für \(U,V \in \mathcal{O}\) ist \(f(U \cup V)\) durch das Minimum der unteren und das Maximum der oberen 
 Schranken von \(f(V), f(U)\) beschränkt). Setzt man \(f(x):=\frac{1}{x}\) und \(X:=(0,1)\), so ist \(f\) lokal beschränkt.
@@ -84,7 +84,7 @@ Für \(f(X)\) jedoch lässt sich keine obere Schranke angeben, weil \((0,1)\) nu
 
 
 \section{Beispiel}
-Man betrachte die Menge \( (0,1) \subset \mathbb{R} \).\\ Auf den ersten Blick, ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
+Man betrachte die Menge \( (0,1) \subset \mathbb{R} \).\\ Auf den ersten Blick ist nicht klar, warum diese Menge, laut unserer Definition von kompakten Räumen, nicht kompakt ist. 
 Nehme man zum Beispiel die offene Überdeckung \( S_{n} := (-n,n) \subset \mathbb{R} , n \in \mathbb{N} \), diese überdeckt sogar ganz \(  \mathbb{R} \). 
 Und \( S_{1} = (-1,1)  \) überdeckt schon unsere ganze Menge \( (0,1) \). \\
 Also hat diese offene Überdeckung eine endliche offene Überdeckung die ganz \( (0,1)\) überdeckt.
