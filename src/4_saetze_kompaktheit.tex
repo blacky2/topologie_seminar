@@ -22,7 +22,7 @@ Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zuta
 	Weiterhin gilt \( B_0(p) \subset B_1(p) \subset \dots \subset B_m(p) \) und es folgt \(K \subset B_m(p)\).
 \qed
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\def\svgwidth{200}
 	\input{4_beschraenktheit.pdf_tex}
@@ -40,14 +40,20 @@ Hier ist eine kleine Skizze die deutlich machen soll, welche Sätze wir als Zuta
 	in einem \(U_{\lambda}, \lambda \in \Lambda\). Dies kann man auch so ausdrücken: 
 	\[ \exists \delta > 0 : \forall p \in I \mbox{ gilt } B_{\delta}(p) \subset U_{\lambda} \mbox { für ein } \lambda \in \Lambda \]
 	Wir nehmen an das Gegenteil sei der Fall:
-	\[ \forall \delta > 0 : \exists p(\delta) \in I \mbox{ mit } B_{\delta}(p) \not\subset U_{\lambda} \mbox { für alle } \lambda \in \Lambda \]
+	\[ \forall \delta > 0 : \exists p(\delta) \in I \mbox{ mit } B_{\delta}(p(\delta)) \not\subset U_{\lambda} \mbox { für alle } \lambda \in \Lambda \]
 	Da diese Aussage für alle \(\delta > 0\) gilt, ist es erlaubt \(\delta = \frac{1}{n}\) zu setzen, wobei \(n \in \mathbb{N}\) ist.
 	Somit haben wir auf dem Intervall \(I\) eine Folge \(p_{n} := p(\frac{1}{n})\) gefunden mit der Eigenschaft, dass für alle \(\lambda \in \Lambda\)
 	gilt \(B_{\frac{1}{n}}(p_{n}) \not\subset U_{\lambda}\). Nach dem aus der Analysis bekannten Satz von Bolzano-Weiherstraß gibt
-	es zu jeder Folge auf dem Intervall \(I\) eine konvergente Teilfolge. Also dürfen wir annehmen, dass eine Teilfolge \(p_{n_k}\) gegen 
-	ein \(p \in I\)  konvergiert. Konvergenz sagt ja gerade aus, dass es zu jeder Umgebung \(U\) von \(p\) ein \(n_0 \in \mathbb{N}\) gibt, 
-	ab dem die Folgenglieder in dieser Umgebung verweilen. Dies wiederum heißt es existiert ein \(B_{\epsilon}(p) \subset U_{\lambda}\) für ein \(\lambda \in \Lambda\), 
-	da \(p\) ja auch in irgendeinem Teil der Überdeckung liegen muss.
+	es zu jeder Folge auf dem Intervall \(I\) eine konvergente Teilfolge. Also dürfen wir zu einer konvergenten Teilfolge mit Limes \(p \in I\) übergehen.
+  Konvergenz sagt ja gerade aus, dass es zu jeder Umgebung \(U\) von \(p\) ein \(n_0 \in \mathbb{N}\) gibt, 
+	ab dem die Folgenglieder in dieser Umgebung verweilen. Dies wiederum heißt, es existiert ein \(B_{\epsilon}(p) \subset U_{\lambda}\) für ein \(\lambda \in \Lambda\)
+	(\(p\) muss ja auch in irgendeinem Teil der Überdeckung liegen). Wählt man nun \(n\) so groß, dass \(p_n \in B_{\frac{\epsilon}{2}}(p)\) und \(\frac{1}{n} < \frac{\epsilon}{2}\),
+	dann gilt:
+	\[ x \in B_{\frac{1}{n}}(p_n) \Rightarrow |x-p| < |p-p_n+p_n-x| < |p-p_n| + |p_n-x| < \frac{\epsilon}{2} + \frac{1}{n} < \epsilon \Rightarrow x \in B_{\epsilon}(p) \]
+	Damit ist \(B_{\frac{1}{n}}(p_n) \subset B_{\epsilon}(p) \subset U_{\lambda}\).
+	Widerspruch zur Annahme und es gibt für alle \(p \in I\) ein \(\delta > 0\) mit \(B_{\delta}(p) \subset U_{\lambda}, \lambda \in \Lambda\).
+	Zerlegt man \(I\) in endlich viele Teilintervalle mit Länge kleiner \(\delta\), so ist jeder dieser Abschnitte ganz in einem \(U_{\lambda}, \lambda \in \Lambda\)
+	enthalten. Daher bilden eben jene \(U_{\lambda}\) eine endliche Überdeckung von \(I\).
 \qed
 
 \begin{Satz}
