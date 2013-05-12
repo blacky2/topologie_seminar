@@ -27,7 +27,7 @@
 	\[\exists U \in U(x) \mbox{ und } \exists V \in U(y) : U \cap V = \emptyset \]
 \end{Def}
 
-\begin{Def}[Offene Überdeckung]
+\begin{Def}[Offene Überdeckung]\label{def:ueberdeckung}
 	Eine Familie \( (U_{\lambda} | \lambda \in \Lambda) \) mit \(U_{\lambda} \in \mathcal{O} \) für alle \( \lambda \in \Lambda \) heißt 	offene Überdeckung von X, wenn gilt:
 	\[ \bigcup_{\lambda \in \Lambda } U_{\lambda} = X \]
 \end{Def}
@@ -36,7 +36,15 @@
 \\
 \textbf{Bemerkug:} \(\Lambda\) ist eine belibige Indexmenge. Ist diese endlicher Mächtigkeit, also \(|\Lambda| < \infty\), so nennt man auch die Überdeckung endlich. 
 \\
-\textbf{Bemerkug:} Eine Überdeckung \( (U_{\gamma} | \gamma \in \Gamma) \)  heißt Teilüberdeckung von \( (U_{\lambda} | \lambda \in \Lambda \), wenn \(\Gamma \subset \Lambda\). 
+\textbf{Bemerkug:} Eine Überdeckung \( (U_{\gamma} | \gamma \in \Gamma) \)  heißt Teilüberdeckung von \( (U_{\lambda} | \lambda \in \Lambda ) \), wenn \(\Gamma \subset \Lambda\). 
+
+\begin{figure}[ht]%{0.50\columnwidth}
+	\centering
+	\def\svgwidth{150}
+	\input{2_ueberdeckung.pdf_tex}
+	\caption{Illustration zur Definition \ref{def:ueberdeckung}}
+	\label{fig:ueberdeckung}
+\end{figure}
 
 \begin{Def}[Offene Kugel]
 	Sei \((X,d)\) ein metrischer Raum, \(p \in X\) und \(\epsilon \in \mathbb{R}\). Dann nennt man
