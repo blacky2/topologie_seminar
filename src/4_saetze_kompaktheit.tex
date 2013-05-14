@@ -31,7 +31,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 \end{figure}
 
 \begin{Satz}\label{satz:intervall}
-	Sei \(I = [ a , b ] \subset \mathbb{R}\) ein Intervall mit \(a<b\) und \(a,b \in \mathbb{R}\). Dann 
+	Sei \(I := [ a , b ] \subset \mathbb{R}\) ein Intervall mit \(a<b\) und \(a,b \in \mathbb{R}\). Dann 
 	ist \(I\) kompakt.
 \end{Satz}
 \beweis{Beweis} 
@@ -82,7 +82,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	\[ \forall a \in A : \exists U_{a} \subset \mathcal{O} \mbox{ mit }  a \in U_{a} \mbox{ und } \exists V_{a}\subset \mathcal{O}, p \in V_{a} 
 		 \mbox{ für die gilt } U_{a} \cap V_{a} = \emptyset \] 
 	Weiterhin folgt aus der Kompaktheit von \(A\) die Existenz einer endliche Menge \(I \subset A\) mit der Eigenschaft:
-	\[ \bigcup_{a \in I} U_{a} = A \]
+	\[ \bigcup_{a \in I} U_{a} \supset A \]
 	Nach Definition eines topologischen Raumes ist der endliche Schnitt \(\bigcap_{a \in I} V_{a}\) offen. Zusätzlich gilt 
 	\(p \in \bigcap_{a \in I} V_{a} \subset  X\backslash A \), weil für jedes \(i \in I\) der Schnitt \( ( \bigcap_{a \in I} V_a ) \cap U_i = \emptyset \) ist und 
 	somit dieser nicht in \(A\) liegt.
@@ -102,7 +102,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
 	Da \(K \) kompakt ist, existiert eine endliche Teilmenge
 	\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \), dann gilt:
-	\[ V \times K \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \] \qed	\\
+	\[ V \times K \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \] \qed \newpage	
 %
 \begin{figure}[ht]
 	\centering
@@ -110,7 +110,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	\input{tubenlemma.pdf_tex}
 	\label{fig:tubenlemma}
 	\caption{Illustration zu Lemma \ref{satz:tubenlemma}}
-\end{figure}
+\end{figure}\\
 %
 \begin{Satz}
 	Ein endliches Produkt hausdorffscher Räume ist wieder hausdorffsch.
