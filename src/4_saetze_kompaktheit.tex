@@ -46,7 +46,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	gilt: \(B_{\frac{1}{n}}(p_{n}) \not\subset U_{\lambda}\). Nach dem aus der Analysis bekannten Satz von Bolzano-Weiherstraß gibt
 	es zu jeder Folge auf dem Intervall \(I\) eine konvergente Teilfolge. Also dürfen wir zu einer konvergenten Teilfolge mit Limes \(p \in I\) übergehen.
   Konvergenz sagt ja gerade aus, dass es zu jeder Umgebung \(U\) von \(p\) ein \(n_0 \in \mathbb{N}\) gibt, 
-	ab dem die Folgenglieder in dieser Umgebung verweilen. Dies wiederum heißt, es existiert ein \(B_{\epsilon}(p) \subset U_{\lambda}\) für ein \(\lambda \in \Lambda\)
+	ab dem die Folgenglieder jener Teilfolge in dieser Umgebung verweilen. Dies wiederum heißt, es existiert ein \(B_{\epsilon}(p) \subset U_{\lambda}\) für ein \(\lambda \in \Lambda\)
 	(\(p\) muss ja auch in irgendeinem Teil der Überdeckung liegen). Wählt man nun \(n\) so groß, dass \(p_n \in B_{\frac{\epsilon}{2}}(p)\) und \(\frac{1}{n} < \frac{\epsilon}{2}\),
 	dann gilt:
 	\[ x \in B_{\frac{1}{n}}(p_n) \Rightarrow |x-p| < |p-p_n+p_n-x| < |p-p_n| + |p_n-x| < \frac{\epsilon}{2} + \frac{1}{n} < \epsilon \Rightarrow x \in B_{\epsilon}(p) \]
@@ -85,7 +85,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	\[ \bigcup_{a \in I} U_{a} \supset A \]
 	Nach Definition eines topologischen Raumes ist der endliche Schnitt \(\bigcap_{a \in I} V_{a}\) offen. Zusätzlich gilt 
 	\(p \in \bigcap_{a \in I} V_{a} \subset  X\backslash A \), weil für jedes \(i \in I\) der Schnitt \( ( \bigcap_{a \in I} V_a ) \cap U_i = \emptyset \) ist und 
-	somit dieser nicht in \(A\) liegt.
+	somit \(  \bigcap_{a \in I} V_a \) nicht in \(A\) liegt.
 	Also ist eine offene Umgebung von \(p\) in \(X\backslash A\) gefunden und da \(p\) beliebig gewählt war, gilt dies für 
 	jeden Punkt \(p \in X\backslash A\). Damit ist \(A\) abgeschlossen. 
 \qed
@@ -101,7 +101,8 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	\( \forall k \in K \; \exists V_{k}, W_{k}\) offene Mengen mit \( p \in V_{k} \subset X, k \in W_{k} \subset K, (p,k) \in  V_{k} \times W_{k} \subset U\).
 	Diese offenen Mengen \(V_{k}, W_{k}\) kann man finden, da laut Vorraussetzung \(U  \subset X \times K \) offen in der Produkttopologie ist.
 	Da \(K \) kompakt ist, existiert eine endliche Teilmenge
-	\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \), dann gilt:
+	\( I \subset K \) mit \( \bigcup_{ k \in I } W_{k} = K \). Wähle \(V := \bigcap_{ k \in I } V_{k} \), dieses \( V\) ist offen, da es ein endlicher Schnitt von offenen Mengen ist.\\
+	Dann gilt:
 	\[ V \times K \subset \bigcup_{k \in I} (V_{k} \times W_{k}) \subset U \] \qed \newpage	
 %
 \begin{figure}[ht]
@@ -154,7 +155,7 @@ Hier ist eine kleine Skizze, die deutlich machen soll, welche Sätze wir als Zut
 	\label{fig:satzprodkomp}
 	\caption{Illustration zu Satz \ref{satz:prodkomp}}
 \end{figure}
-	
+%	
 \textbf{Bemerkung:} Der Satz von Tychoff zeigt sogar, dass überabzählbare Produkte kompakter Räume wieder kompakt sind. \\
 %
 \\
@@ -168,19 +169,19 @@ Nun können wir endlich zu unserem Hauptziel nämlich dem Satz von Heine-Borel z
 	Zu \(\Leftarrow \): \\
 	Jede abgeschlossene und beschränkte Menge \(A \subset\mathbb{R}^n \), liegt in einem abgeschlossenen n-dimensionalen Würfel
 	\( Q_r:= \{ x \in \mathbb{R}^n | \; |x_i| \leq r \quad i=1, \dots, n\} \subset \mathbb{R}^n \). 
-	Dies folgt sofort aus der Beschränktheit der Menge \(A\). Der Würfel \(Q_r\) ist als Produkt abgeschlossener und beschränkter Intervalle nach den Sätzen \ref{satz:prodkomp} und \ref{satz:intervall} kompakt.
+	Dies folgt sofort aus der Beschränktheit der Menge \(A\). Der Würfel \(Q_r\) ist als Produkt abgeschlossener und beschränkter Intervalle nach den Sätzen \ref{satz:prodkomp} und
+	\ref{satz:intervall} kompakt.
 	Mit Satz \ref{satz:abgeschlkomp} folgt die Kompaktheit der darin enthaltenen abgeschlossenen Mengen.
 	\\
 	Zu \(\Rightarrow \): \\
-	Sei \( K \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz \ref{satz:kompabgeschl} abgeschlossen und wegen Satz \ref{satz:beschr} ist sie auch beschränkt.
+	Sei \( A \subset \mathbb{R}^n \) kompakt, dann ist sie laut Satz \ref{satz:kompabgeschl} abgeschlossen und wegen Satz \ref{satz:beschr} ist sie auch beschränkt.
 \qed \\
 %
 \\
-\textbf{Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, der \(\mathbb{R}^n \) ist. Für metrische Räume ist dieser Satz nicht allgemein gültig. 
-Da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist.
+\textbf{Bemerkung:} Wichtig ist hierfür aber die Vorraussetzung, dass der topologische Raum, der \(\mathbb{R}^n \) ist. Für metrische Räume ist dieser Satz nicht allgemein gültig, da zum Beispiel mit der trivialen Metrik jede Menge beschränkt ist.
 \\
 %
-Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft angewandten Raum, nämlich dem \(\mathbb{R}^n \), 
+Dieser enorm wichtige Satz hat die wunderbare Eigenschaft, dass man in einem sehr oft benötigten Raum, nämlich dem \(\mathbb{R}^n \), 
 jetzt relativ leicht entscheiden kann ob eine Teilmenge kompakt ist. 
 
 \section{Weitere}
@@ -228,7 +229,7 @@ jetzt relativ leicht entscheiden kann ob eine Teilmenge kompakt ist.
 		Raum eine konvergente Teilfolge.
 	\qed\\
 	%
-	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage, das jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
+	{\bf Bemerkung:} Die Aussage dieses Satzes ist natürlich äquivalent mit der Aussage, dass jede Folge in einem kompakten Raum mindestens einen Häufungspunkt besitzt. 
 	%
 	
 
