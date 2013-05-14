@@ -51,7 +51,7 @@
   \begin{picture}(1,0.68513966)%
     \put(0,0){\includegraphics[width=\unitlength]{heineborel_skizze0.pdf}}%
     \put(0.16775823,0.65987307){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.71667126\unitlength}\raggedright \\ \end{minipage}}}%
-    \put(0.163559,0.66685925){\makebox(0,0)[lt]{\begin{minipage}{0.72206063\unitlength}\raggedright  \textbf {Satz von Heine Borel: }\\ \\  Eine Teilmenge  $ A \subset \mathbb{R} $ ist kompakt, \\ \\  genau dann wenn $A$ abgeschlossen und beschränkt ist. \end{minipage}}}%
+    \put(0.163559,0.66685925){\makebox(0,0)[lt]{\begin{minipage}{0.72206063\unitlength}\raggedright  \textbf {Satz von Heine Borel: }\\ \\  Eine Teilmenge  $ A \subset \mathbb{R}^n $ ist kompakt, \\ \\  genau dann wenn $A$ abgeschlossen und beschränkt ist. \end{minipage}}}%
     \put(0.01524976,0.24520946){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Ein kompakter Teilraum $K$ eines 
 }}}%
     \put(0.55917667,0.39740142){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Ein Intervall [a, b]  in $ \mathbb{R} $  
